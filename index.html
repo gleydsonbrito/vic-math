@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulado Mestre: Matemática</title>
+    <title>Simulado: Regra de Três e Torneiras</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
+        body { font-family: 'Inter', sans-serif; background-color: #f0fdf4; } /* Light green background */
         .radio-custom:checked + div {
-            border-color: #3b82f6; /* Tailwind blue-500 */
-            background-color: #eff6ff; /* Tailwind blue-50 */
+            border-color: #10b981; /* Tailwind emerald-500 */
+            background-color: #ecfdf5; /* Tailwind emerald-50 */
         }
         .correct-answer { background-color: #dcfce3 !important; border-color: #22c55e !important; }
         .wrong-answer { background-color: #fee2e2 !important; border-color: #ef4444 !important; }
         
-        /* Smooth reveal for explanations */
         .explanation-block {
             max-height: 0;
             overflow: hidden;
@@ -33,11 +32,12 @@
 <body class="text-gray-800 antialiased pb-20">
 
     <!-- Header -->
-    <header class="bg-blue-800 text-white p-6 shadow-md rounded-b-3xl mb-6 relative overflow-hidden">
-        <div class="absolute -right-4 -top-4 w-24 h-24 bg-blue-500 rounded-full opacity-50 blur-xl"></div>
+    <header class="bg-slate-900 text-white p-6 shadow-lg rounded-b-3xl mb-6 relative overflow-hidden">
+        <div class="absolute -left-10 -top-10 w-32 h-32 bg-emerald-500 rounded-full opacity-30 blur-2xl"></div>
+        <div class="absolute -right-10 -bottom-10 w-32 h-32 bg-blue-500 rounded-full opacity-30 blur-2xl"></div>
         <div class="relative z-10 max-w-3xl mx-auto text-center">
-            <h1 class="text-2xl md:text-3xl font-bold mb-2">Simulado Mestre</h1>
-            <p class="text-blue-100 text-sm md:text-base font-medium">Matemática: Frações, Porcentagem e Regra de Três (Foco CAp/UPE e IFPE)</p>
+            <h1 class="text-2xl md:text-3xl font-extrabold mb-2 tracking-tight">Simulado: Regra de Três e Torneiras</h1>
+            <p class="text-emerald-400 text-sm md:text-base font-semibold">Técnicas de Resolução Rápida (Foco CAp/UPE e IFPE)</p>
         </div>
     </header>
 
@@ -45,69 +45,135 @@
     <main class="max-w-3xl mx-auto px-4">
         
         <!-- Theory Section -->
-        <section class="bg-white rounded-2xl shadow-sm p-6 mb-8 border border-gray-100">
-            <div class="flex items-center gap-3 mb-6 border-b pb-4">
-                <span class="bg-blue-100 text-blue-700 p-2 rounded-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+        <section class="bg-white rounded-2xl shadow-md p-6 mb-8 border border-emerald-100">
+            <div class="flex items-center gap-3 mb-6 border-b border-gray-100 pb-4">
+                <span class="bg-emerald-100 text-emerald-700 p-2 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
                 </span>
-                <h2 class="text-xl md:text-2xl font-bold text-gray-900">O Coração da Matemática nas Provas</h2>
+                <h2 class="text-xl md:text-2xl font-bold text-slate-800">Aula Mestra: O Domínio da Proporção</h2>
             </div>
             
-            <p class="text-gray-600 mb-6 text-sm md:text-base">No IFPE e no CAp/UPE, a matemática raramente é uma conta "seca" (resolva x). Ela vem contextualizada. O tripé <strong>Fração, Porcentagem e Proporção</strong> é o motor de 70% da prova.</p>
-
-            <div class="space-y-8 text-sm md:text-base leading-relaxed text-gray-700">
+            <div class="space-y-10 text-sm md:text-base text-slate-700 leading-relaxed">
                 
-                <!-- 1. A Fração além da Pizza -->
+                <!-- 1. Grandezas -->
                 <div>
-                    <h3 class="font-bold text-blue-800 text-lg mb-2 flex items-center gap-2">
-                        <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">1</span>
-                        A Fração além da Pizza
-                    </h3>
-                    <p>Esqueça apenas a ideia de "cortar fatias". A fração (a/b) é, antes de tudo, uma divisão e uma proporção. Se você acertou <strong>3/5 de uma prova de 40 questões</strong>, você divide o total (40) em 5 partes iguais (40 ÷ 5 = 8) e pega 3 dessas partes (8 × 3 = 24 acertos).</p>
+                    <h3 class="font-bold text-emerald-700 text-xl mb-3 border-l-4 border-emerald-500 pl-3">1. O que são "Grandezas"?</h3>
+                    <p class="mb-3">Antes de calcular qualquer coisa, você precisa entender o básico: <strong>Grandeza é tudo aquilo que pode ser medido, contado ou pesado.</strong> Tempo, velocidade, número de operários, litros de água, quilos de carne... tudo isso são grandezas.</p>
+                    <p>O segredo para resolver problemas no IFPE e no CAp/UPE é ser um "detetive de grandezas". Você sempre deve se perguntar: <em>"Se eu aumentar a Grandeza A, o que acontece naturalmente com a Grandeza B?"</em></p>
                 </div>
 
-                <!-- 2. Porcentagem -->
-                <div>
+                <!-- 2. Regra de Três Direta -->
+                <div class="bg-blue-50 p-5 rounded-xl border border-blue-200">
                     <h3 class="font-bold text-blue-800 text-lg mb-2 flex items-center gap-2">
                         <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">2</span>
-                        Porcentagem é uma Fração Disfarçada
+                        Regra de Três Direta (O Básico)
                     </h3>
-                    <p class="mb-3">O símbolo '%' significa literalmente 'dividido por 100'. Saber essas equivalências de cabeça salva um tempo precioso na prova!</p>
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-                        <div class="bg-blue-50 text-blue-800 p-3 rounded-lg text-center font-semibold">25% = 1/4</div>
-                        <div class="bg-blue-50 text-blue-800 p-3 rounded-lg text-center font-semibold">50% = 1/2</div>
-                        <div class="bg-blue-50 text-blue-800 p-3 rounded-lg text-center font-semibold">20% = 1/5</div>
-                        <div class="bg-blue-50 text-blue-800 p-3 rounded-lg text-center font-semibold">75% = 3/4</div>
+                    <p class="mb-4">Duas grandezas são <strong>diretamente proporcionais</strong> quando uma cresce e a outra cresce junto (ou ambas diminuem juntas).</p>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-sm mb-3 border-l-4 border-blue-400">
+                        <strong class="text-blue-900 block mb-2">Exemplo Passo a Passo:</strong>
+                        <p class="mb-2 italic text-gray-600">"Comprei 5 cadernos por R$ 30,00. Quanto pagarei se quiser comprar 8 cadernos idênticos?"</p>
+                        
+                        <p class="mb-2 font-semibold">Passo 1: Montar a estrutura (coluna embaixo de coluna).</p>
+                        <div class="font-mono bg-gray-100 p-2 rounded text-center text-sm mb-3">
+                            Cadernos | Valor (R$)<br>
+                            &nbsp;&nbsp; 5 &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp; 30<br>
+                            &nbsp;&nbsp; 8 &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp; X
+                        </div>
+                        
+                        <p class="mb-2 font-semibold">Passo 2: Análise de setas.</p>
+                        <p class="mb-2">Se eu comprar MAIS cadernos (de 5 para 8), eu vou pagar MAIS dinheiro. As duas grandezas sobem. São DIRETA.</p>
+                        
+                        <p class="mb-2 font-semibold">Passo 3: Multiplicar Cruzado (Formato em X).</p>
+                        <p class="bg-blue-100 p-2 rounded font-mono text-center mb-1">
+                            5 * X = 8 * 30<br>
+                            5X = 240<br>
+                            X = 240 / 5<br>
+                            <strong>X = 48 (Pagarei R$ 48,00)</strong>
+                        </p>
                     </div>
                 </div>
 
-                <!-- 3. Fator de Aumento e Desconto -->
-                <div>
-                    <h3 class="font-bold text-blue-800 text-lg mb-2 flex items-center gap-2">
-                        <span class="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">3</span>
-                        Fator de Aumento e Desconto
+                <!-- 3. Regra de Três Inversa -->
+                <div class="bg-purple-50 p-5 rounded-xl border border-purple-200">
+                    <h3 class="font-bold text-purple-800 text-lg mb-2 flex items-center gap-2">
+                        <span class="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">3</span>
+                        Regra de Três Inversa (A Pegadinha!)
                     </h3>
-                    <ul class="list-none pl-0 space-y-3">
-                        <li class="bg-gray-50 p-3 rounded-lg border-l-4 border-green-400">
-                            <strong class="text-green-800">Desconto:</strong> Se uma calça custa R$ 100 e tem 20% de desconto, você não paga 20%. Você paga <strong>80%</strong> do valor (100% - 20%).
-                        </li>
-                        <li class="bg-gray-50 p-3 rounded-lg border-l-4 border-red-400">
-                            <strong class="text-red-800">Aumento:</strong> Se sofre um aumento de 20%, você passa a pagar <strong>120%</strong> do valor original (100% + 20%).
-                        </li>
-                    </ul>
+                    <p class="mb-4">Duas grandezas são <strong>inversamente proporcionais</strong> quando o aumento de uma provoca a diminuição da outra.</p>
+                    
+                    <div class="bg-white p-4 rounded-lg shadow-sm mb-3 border-l-4 border-purple-400">
+                        <strong class="text-purple-900 block mb-2">Exemplo Passo a Passo:</strong>
+                        <p class="mb-2 italic text-gray-600">"Uma equipe de 10 operários constrói um muro em 30 dias. Se o chefe contratar mais gente e a equipe passar a ter 15 operários, em quantos dias o muro ficará pronto?"</p>
+                        
+                        <p class="mb-2 font-semibold">Passo 1: Montar a estrutura.</p>
+                        <div class="font-mono bg-gray-100 p-2 rounded text-center text-sm mb-3">
+                            Operários | Dias<br>
+                            &nbsp;&nbsp;&nbsp; 10 &nbsp;&nbsp;&nbsp; | &nbsp; 30<br>
+                            &nbsp;&nbsp;&nbsp; 15 &nbsp;&nbsp;&nbsp; | &nbsp; X
+                        </div>
+                        
+                        <p class="mb-2 font-semibold text-red-600">Passo 2: Análise (O ERRO FATAL).</p>
+                        <p class="mb-2">Se temos MAIS operários trabalhando, a obra terminará em MENOS dias. Certo? Uma sobe, outra desce. São INVERSAS!</p>
+                        <p class="mb-3 text-sm bg-red-100 p-2 rounded border border-red-200 text-red-800">
+                            <strong>NUNCA multiplique cruzado aqui!</strong> Se fizer isso (15X = 300 -> X = 20... ops, pera aí, estaria certo? Não! 10X = 450 -> X = 45. Mais operários demorando mais tempo? Absurdo!)
+                        </p>
+
+                        <p class="mb-2 font-semibold text-emerald-600">Passo 3: A Resolução Correta.</p>
+                        <p class="mb-2">Como é inversa, você tem duas opções: <strong>Inverter a fração</strong> que tem o X, ou <strong>Multiplicar em Linha Reta (—)</strong>. Multiplicar em linha é mais rápido:</p>
+                        <p class="bg-purple-100 p-2 rounded font-mono text-center">
+                            15 * X = 10 * 30<br>
+                            15X = 300<br>
+                            X = 300 / 15<br>
+                            <strong>X = 20 dias (Faz todo sentido, tempo menor!)</strong>
+                        </p>
+                    </div>
                 </div>
 
-                <!-- 4. Regra de Três -->
-                <div class="bg-yellow-50 border border-yellow-200 p-5 rounded-xl shadow-sm">
-                    <h3 class="font-bold text-yellow-800 text-lg mb-2 flex items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-yellow-600" viewBox="0 0 20 20" fill="currentColor"><path d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z" /></svg>
-                        A Poderosa Regra de Três Simples
-                    </h3>
-                    <p class="text-yellow-900 mb-2">Usada para comparar grandezas. Mas cuidado com a pegadinha clássica, sempre pergunte ao problema se as setas sobem juntas ou opostas:</p>
-                    <ul class="list-disc pl-5 mt-2 space-y-2 text-yellow-900">
-                        <li><strong>Diretamente Proporcionais:</strong> Se eu compro MAIS pães, pago MAIS dinheiro. (Multiplica cruzado ✖️).</li>
-                        <li><strong>Inversamente Proporcionais:</strong> Se eu aumento a VELOCIDADE, o TEMPO da viagem DIMINUI. (Multiplica em linha reta ➖).</li>
-                    </ul>
+                <!-- 4. Torneiras (Trabalho Simultâneo) -->
+                <div class="bg-slate-800 text-white p-6 rounded-xl shadow-lg relative overflow-hidden">
+                    <div class="absolute right-0 top-0 opacity-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-40 w-40" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" clip-rule="evenodd" /></svg>
+                    </div>
+                    
+                    <h3 class="font-bold text-emerald-400 text-2xl mb-4 relative z-10">4. O Clássico: Problema das Torneiras</h3>
+                    <p class="relative z-10 mb-5 text-slate-200">As bancas adoram colocar torneiras, impressoras ou pintores trabalhando juntos com tempos diferentes. Por que as pessoas erram tanto? Porque a intuição engana.</p>
+
+                    <div class="bg-slate-700 p-4 rounded-lg relative z-10 mb-5 border-l-4 border-emerald-500">
+                        <strong class="text-emerald-300 block mb-2 text-lg">A Lógica (Por que não podemos somar tempos?)</strong>
+                        <p class="mb-3 text-sm">Imagine que a Torneira A enche um tanque em 2 horas. A Torneira B enche em 3 horas. Se você abrir as duas juntas, quanto tempo leva? Muitos alunos somam: 2 + 3 = 5 horas. <strong>Absurdo!</strong> Se a Torneira A sozinha faz em 2h, as duas ajudando-se farão em <em>menos</em> de 2h!</p>
+                        
+                        <strong class="text-emerald-300 block mb-2 text-lg">O Método das Frações (O método oficial)</strong>
+                        <p class="mb-2 text-sm">Temos que reduzir tudo a 1 hora (ou 1 dia).<br>
+                        - Em 1 hora, a torneira A enche <strong>1/2</strong> do tanque.<br>
+                        - Em 1 hora, a torneira B enche <strong>1/3</strong> do tanque.<br>
+                        Juntas em 1 hora, elas enchem: <code>1/2 + 1/3 = 3/6 + 2/6 = 5/6</code> do tanque.<br>
+                        Se elas enchem 5/6 em 1 hora, o tempo total é a fração invertida: <code>6/5 de hora</code>. (6 dividido por 5 = 1,2 hora = 1h e 12 minutos).</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
+                        <div class="bg-slate-900 p-4 rounded-lg border-2 border-emerald-400">
+                            <strong class="text-emerald-400 block mb-2">MACETE 1: O Atalho Mágico</strong>
+                            <p class="text-sm text-slate-300 mb-3">Para calcular duas torneiras trabalhando JUNTAS para o mesmo objetivo (ambas enchendo), use o macete do "Produto pela Soma":</p>
+                            <code class="text-emerald-300 bg-slate-800 px-3 py-2 rounded-lg block text-center font-bold text-lg border border-emerald-800 mb-3">Tempo = (A × B) / (A + B)</code>
+                            <div class="text-xs text-slate-400 bg-slate-800 p-2 rounded">
+                                Exemplo: A=2h, B=3h.<br>
+                                T = (2 × 3) / (2 + 3)<br>
+                                T = 6 / 5 = 1,2 horas.
+                            </div>
+                        </div>
+                        
+                        <div class="bg-slate-900 p-4 rounded-lg border-2 border-red-500">
+                            <strong class="text-red-400 block mb-2">MACETE 2: Torneira + Ralo</strong>
+                            <p class="text-sm text-slate-300 mb-3">E se uma torneira enche em 4h e um ralo aberto esvazia em 6h? Trabalham contra! Use o "Produto pela Diferença":</p>
+                            <code class="text-red-300 bg-slate-800 px-3 py-2 rounded-lg block text-center font-bold text-lg border border-red-800 mb-3">Tempo = (A × B) / (Maior - Menor)</code>
+                            <div class="text-xs text-slate-400 bg-slate-800 p-2 rounded">
+                                Exemplo: Torneira=4h, Ralo=6h.<br>
+                                T = (4 × 6) / (6 - 4)<br>
+                                T = 24 / 2 = 12 horas.
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -115,34 +181,34 @@
 
         <!-- Quiz Form -->
         <div id="quiz-container" class="space-y-6">
-            <!-- Questions will be injected here by JS -->
+            <!-- Questions injected by JS -->
         </div>
 
         <!-- Submit Button -->
-        <button id="btn-submit" onclick="submitQuiz()" class="w-full mt-8 bg-blue-700 hover:bg-blue-800 text-white font-bold py-4 rounded-xl shadow-lg transition duration-200 transform hover:-translate-y-1 flex justify-center items-center gap-2">
-            <span>Finalizar Simulado</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+        <button id="btn-submit" onclick="submitQuiz()" class="w-full mt-8 bg-slate-900 hover:bg-slate-800 text-white font-extrabold py-5 rounded-2xl shadow-xl transition duration-300 transform hover:-translate-y-1 flex justify-center items-center gap-3">
+            <span class="text-lg tracking-wide uppercase">Corrigir Simulado</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
         </button>
 
-        <!-- Results Area (Hidden initially) -->
-        <div id="results-area" class="hidden mt-8 text-center p-6 bg-white rounded-2xl shadow-lg border-2 border-green-500">
-            <h2 class="text-2xl font-bold text-gray-800 mb-2">Seu Desempenho</h2>
-            <div class="text-4xl font-extrabold text-blue-700 mb-2" id="score-text">0 / 10</div>
-            <p class="text-gray-600 mb-6 font-medium" id="score-message">Mensagem</p>
-            <button onclick="location.reload()" class="bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-3 px-8 rounded-xl transition">Refazer Simulado</button>
+        <!-- Results Area -->
+        <div id="results-area" class="hidden mt-8 text-center p-8 bg-white rounded-3xl shadow-xl border-4 border-emerald-500 relative overflow-hidden">
+            <h2 class="text-2xl font-bold text-slate-800 mb-2">Seu Desempenho</h2>
+            <div class="text-5xl font-black text-emerald-600 mb-3 drop-shadow-sm" id="score-text">0 / 10</div>
+            <p class="text-slate-600 mb-6 font-medium text-lg" id="score-message">Mensagem</p>
+            <button onclick="location.reload()" class="bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold py-3 px-8 rounded-xl transition border border-slate-300">Treinar Novamente</button>
         </div>
 
     </main>
 
     <!-- Custom Alert Modal -->
-    <div id="custom-alert" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl shadow-xl max-w-sm w-full p-6 text-center transform transition-all">
-            <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-yellow-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+    <div id="custom-alert" class="fixed inset-0 bg-slate-900 bg-opacity-70 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-sm w-full p-8 text-center transform transition-all">
+            <div class="w-20 h-20 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-5">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
             </div>
-            <h3 class="text-lg font-bold text-gray-900 mb-2">Faltam questões!</h3>
-            <p class="text-gray-600 mb-6" id="alert-message">Por favor, marque uma alternativa em todas as questões antes de finalizar.</p>
-            <button onclick="closeAlert()" class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 rounded-xl transition">Entendi</button>
+            <h3 class="text-xl font-bold text-slate-900 mb-2">Faltam Respostas!</h3>
+            <p class="text-slate-600 mb-8" id="alert-message">Por favor, marque uma alternativa em todas as questões para liberar o gabarito comentado.</p>
+            <button onclick="closeAlert()" class="w-full bg-amber-500 hover:bg-amber-600 text-white font-bold py-3 rounded-xl transition shadow-md">Voltar ao Simulado</button>
         </div>
     </div>
 
@@ -151,133 +217,133 @@
         const questionsData = [
             {
                 id: 1,
-                category: "Frações",
-                text: "Quanto é 3/5 de 150 estudantes?",
+                category: "Regra de Três Direta",
+                text: "Para um churrasco, calcula-se que 5 kg de carne servem 20 pessoas. Se a festa tiver 32 pessoas, quantos quilos de carne serão necessários?",
                 options: [
-                    { id: 'A', text: '60 estudantes' },
-                    { id: 'B', text: '90 estudantes' },
-                    { id: 'C', text: '120 estudantes' },
-                    { id: 'D', text: '30 estudantes' }
+                    { id: 'A', text: '7 kg' },
+                    { id: 'B', text: '8 kg' },
+                    { id: 'C', text: '9 kg' },
+                    { id: 'D', text: '10 kg' }
                 ],
                 answer: 'B',
-                explanation: "<strong>Passo a passo:</strong> Pegue o total (150) e divida pelo de baixo (denominador 5) para descobrir o valor de 1 parte: 150 ÷ 5 = 30. Agora multiplique pelo de cima (numerador 3), pois você quer 3 dessas partes: 30 × 3 = 90. Portanto, 90 estudantes!"
+                explanation: "<strong>Diretamente Proporcional!</strong> Mais pessoas = Mais carne. Multiplicamos cruzado:<br>5 kg --- 20 pessoas<br>X kg --- 32 pessoas<br>20X = 5 × 32 ➔ 20X = 160 ➔ X = 160 ÷ 20 = 8 kg.<br><em>Macete:</em> 20 pessoas / 5 kg = 4 pessoas por kg. Para 32 pessoas: 32 ÷ 4 = 8 kg."
             },
             {
                 id: 2,
-                category: "Porcentagem",
-                text: "Um celular custa R$ 1.200,00. O vendedor ofereceu 30% de desconto para pagamento à vista. Qual o VALOR DO DESCONTO?",
+                category: "Regra de Três Direta",
+                text: "Uma máquina industrial produz 100 peças plásticas a cada 20 minutos de funcionamento contínuo. Quantas peças ela produzirá em 1 hora (60 minutos)?",
                 options: [
-                    { id: 'A', text: 'R$ 300,00' },
-                    { id: 'B', text: 'R$ 360,00' },
-                    { id: 'C', text: 'R$ 840,00' },
-                    { id: 'D', text: 'R$ 400,00' }
+                    { id: 'A', text: '200' },
+                    { id: 'B', text: '250' },
+                    { id: 'C', text: '300' },
+                    { id: 'D', text: '400' }
                 ],
-                answer: 'B',
-                explanation: "<strong>Atenção!</strong> A questão pediu o valor do DESCONTO, não o preço final do celular. Calcular 30% é o mesmo que multiplicar por 30/100 (ou 3/10 cortando os zeros).<br>1) 1200 ÷ 10 = 120.<br>2) 120 × 3 = R$ 360,00 de desconto. (Se perguntasse o preço final, seria 1200 - 360 = 840)."
+                answer: 'C',
+                explanation: "<strong>Diretamente Proporcional!</strong> Mais tempo = Mais peças.<br>100 peças --- 20 min<br>X peças --- 60 min<br>20X = 6000 ➔ X = 6000 ÷ 20 = 300 peças.<br><em>Lógica Rápida:</em> De 20 para 60 minutos, o tempo triplicou. A produção também triplica: 100 × 3 = 300."
             },
             {
                 id: 3,
-                category: "Porcentagem e Lógica",
-                text: "Se 30% dos 40 alunos de uma sala são meninas, quantos SÃO MENINOS nessa sala?",
+                category: "Regra de Três Inversa",
+                text: "Uma equipe de 15 operários consegue construir o muro do colégio em 40 dias. O reitor exigiu rapidez e contratou mais operários, totalizando 20 homens na obra. Em quantos dias o muro ficará pronto?",
                 options: [
-                    { id: 'A', text: '12 meninos' },
-                    { id: 'B', text: '24 meninos' },
-                    { id: 'C', text: '28 meninos' },
-                    { id: 'D', text: '30 meninos' }
+                    { id: 'A', text: '30 dias' },
+                    { id: 'B', text: '50 dias' },
+                    { id: 'C', text: '25 dias' },
+                    { id: 'D', text: '45 dias' }
                 ],
-                answer: 'C',
-                explanation: "<strong>Pegadinha clássica!</strong> Se 30% são meninas, então os meninos representam o resto para completar o total (100%). Ou seja, 70% são meninos.<br>Vamos calcular 70% de 40: (70/100) × 40 = 7 × 4 = 28 meninos. Se você calculou 30% de 40 achou 12, que é o número de meninas!"
+                answer: 'A',
+                explanation: "<strong>ATENÇÃO: INVERSA!</strong> MAIS operários trabalhando significa MENOS dias para terminar. Multiplicamos <em>em linha reta (➖)</em>, e não cruzado!<br>15 operários --- 40 dias<br>20 operários --- X dias<br>20 × X = 15 × 40<br>20X = 600 ➔ X = 600 ÷ 20 = 30 dias."
             },
             {
                 id: 4,
-                category: "Operações com Frações",
-                text: "Em um concurso do IFPE, um candidato gastou 1/3 do tempo na prova de português e 1/2 do tempo na prova de matemática. Qual fração do tempo total ele gastou nessas duas provas juntas?",
+                category: "Regra de Três Inversa",
+                text: "Fazendo uma viagem de carro a uma velocidade constante de 60 km/h, gasta-se 4 horas no percurso. Se o motorista quiser fazer a mesma viagem em apenas 3 horas, qual deve ser a nova velocidade?",
                 options: [
-                    { id: 'A', text: '2/5' },
-                    { id: 'B', text: '1/6' },
-                    { id: 'C', text: '5/6' },
-                    { id: 'D', text: '2/6' }
+                    { id: 'A', text: '70 km/h' },
+                    { id: 'B', text: '80 km/h' },
+                    { id: 'C', text: '90 km/h' },
+                    { id: 'D', text: '100 km/h' }
                 ],
-                answer: 'C',
-                explanation: "<strong>Soma de frações com denominadores diferentes!</strong> Você NÃO PODE somar direto (1+1 / 3+2). Temos que igualar as bases tirando o MMC de 3 e 2, que é 6. Ajustando as frações:<br>1/3 = 2/6 (multiplicou por 2)<br>1/2 = 3/6 (multiplicou por 3)<br>Agora sim: 2/6 + 3/6 = 5/6. Ele gastou cinco sextos do tempo."
+                answer: 'B',
+                explanation: "<strong>INVERSA!</strong> Para DIMINUIR o tempo da viagem, tem que AUMENTAR a velocidade. Seta de um lado sobe, do outro desce. Multiplique em linha:<br>60 km/h --- 4 h<br>V km/h --- 3 h<br>3 × V = 60 × 4<br>3V = 240 ➔ V = 240 ÷ 3 = 80 km/h."
             },
             {
                 id: 5,
-                category: "Regra de Três Simples",
-                text: "Para fazer um bolo para 4 pessoas, utilizam-se 200g de farinha. Quantas gramas de farinha são necessárias para fazer o mesmo bolo para 10 pessoas?",
+                category: "O Segredo das Torneiras",
+                text: "Um tanque possui duas torneiras. A torneira A, sozinha, enche o tanque em 2 horas. A torneira B, sozinha, enche o mesmo tanque em 3 horas. Se abrirmos as duas juntas, em quanto tempo o tanque ficará cheio?",
                 options: [
-                    { id: 'A', text: '400g' },
-                    { id: 'B', text: '500g' },
-                    { id: 'C', text: '600g' },
-                    { id: 'D', text: '800g' }
+                    { id: 'A', text: '2h e 30m' },
+                    { id: 'B', text: '1h e 12m' },
+                    { id: 'C', text: '5 horas' },
+                    { id: 'D', text: '1h e 50m' }
                 ],
                 answer: 'B',
-                explanation: "<strong>Regra de três direta!</strong> Mais pessoas = mais farinha. As duas setas sobem. Multiplicamos cruzado:<br>4 pessoas --- 200g<br>10 pessoas --- Xg<br>4X = 2000 ➔ X = 2000 ÷ 4 = 500g.<br><em>Método Rápido:</em> Se 4 pessoas usam 200g, 1 pessoa usa 50g (200÷4). Para 10 pessoas: 10 × 50 = 500g."
+                explanation: "<strong>MACETE DE OURO (Trabalho Conjunto):</strong> <code>Tempo = Produto / Soma</code><br>Produto: 2 × 3 = 6<br>Soma: 2 + 3 = 5<br>Tempo = 6 / 5 horas. Dividindo 6 por 5, temos 1,2 horas. <br>0,2 horas equivalem a (0,2 × 60) = 12 minutos. Logo: 1h e 12m!"
             },
             {
                 id: 6,
-                category: "Regra de Três Inversa",
-                text: "Uma viagem é feita em 6 horas a uma velocidade média de 80 km/h. Se a velocidade aumentar para 120 km/h, em quanto tempo a mesma viagem será feita?",
+                category: "Torneira + Ralo",
+                text: "Uma torneira enche uma piscina em 4 horas. No fundo da piscina há um ralo aberto que esvazia a piscina inteira em 6 horas. Se abrirmos a torneira e esquecermos o ralo aberto, a piscina encherá em:",
                 options: [
-                    { id: 'A', text: '3 horas' },
-                    { id: 'B', text: '4 horas' },
-                    { id: 'C', text: '8 horas' },
-                    { id: 'D', text: '9 horas' }
+                    { id: 'A', text: '10 horas' },
+                    { id: 'B', text: '2 horas' },
+                    { id: 'C', text: '12 horas' },
+                    { id: 'D', text: 'Nunca encherá' }
                 ],
-                answer: 'B',
-                explanation: "<strong>Atenção Máxima!</strong> Grandezas inversamente proporcionais. Se eu AUMENTO a velocidade, o tempo de viagem DIMINUI. Seta sobe de um lado, desce do outro. Multiplicamos em LINHA RETA:<br>120 × X = 80 × 6<br>120X = 480<br>X = 480 ÷ 120 = 4 horas."
+                answer: 'C',
+                explanation: "<strong>MACETE DO RALO (Um ajuda, outro atrapalha):</strong> <code>Tempo = Produto / Diferença</code><br>Produto: 4 × 6 = 24<br>Diferença (maior menos o menor): 6 - 4 = 2<br>Tempo = 24 / 2 = 12 horas.<br><em>A prova do IFPE adora essa questão!</em>"
             },
             {
                 id: 7,
-                category: "Equivalências",
-                text: "Qual das frações abaixo é equivalente a 60%?",
+                category: "Trabalho Conjunto (Máquinas)",
+                text: "Duas impressoras industriais vão imprimir o edital do IFPE. A impressora 1 faz o lote inteiro sozinha em 3 horas. A impressora 2 faz o mesmo lote sozinha em 6 horas. Juntas, imprimirão o lote em:",
                 options: [
-                    { id: 'A', text: '3/5' },
-                    { id: 'B', text: '4/5' },
-                    { id: 'C', text: '1/6' },
-                    { id: 'D', text: '2/3' }
+                    { id: 'A', text: '2 horas' },
+                    { id: 'B', text: '4,5 horas' },
+                    { id: 'C', text: '1,5 horas' },
+                    { id: 'D', text: '9 horas' }
                 ],
                 answer: 'A',
-                explanation: "60% é literalmente 60/100. Vamos simplificar essa fração até onde der?<br>1) Corta um zero de cima e de baixo: 6/10.<br>2) Ambos são pares, então dividimos por 2 em cima e embaixo: 6÷2 = 3 e 10÷2 = 5.<br>Pronto! A fração irredutível é 3/5."
+                explanation: "Mesma lógica das torneiras ajudando-se! Usamos <code>Produto / Soma</code>.<br>Produto: 3 × 6 = 18<br>Soma: 3 + 6 = 9<br>Tempo = 18 / 9 = 2 horas. Rápido e prático!"
             },
             {
                 id: 8,
-                category: "Porcentagem (Fator)",
-                text: "Uma bicicleta sofreu um aumento de 15%, passando a custar R$ 230,00. Qual era o valor da bicicleta ANTES do aumento?",
+                category: "Desafio 3 Fontes",
+                text: "Três pedreiros são contratados para pintar uma quadra. O primeiro pintaria sozinho em 2 dias. O segundo em 3 dias. O terceiro é mais lento, pintaria sozinho em 6 dias. Trabalhando todos juntos, a quadra ficará pronta em:",
                 options: [
-                    { id: 'A', text: 'R$ 180,00' },
-                    { id: 'B', text: 'R$ 195,00' },
-                    { id: 'C', text: 'R$ 200,00' },
-                    { id: 'D', text: 'R$ 215,00' }
+                    { id: 'A', text: '1 dia' },
+                    { id: 'B', text: '2 dias' },
+                    { id: 'C', text: '3 dias' },
+                    { id: 'D', text: '1,5 dia' }
                 ],
-                answer: 'C',
-                explanation: "A bicicleta custava 100% no início. Com o aumento de 15%, ela passou a valer 115%. Então, R$ 230 equivale a 115%. Montando a regra de três:<br>115% --- R$ 230<br>100% --- X<br>115X = 23000 ➔ X = 23000 ÷ 115 = R$ 200,00.<br><em>Dica ninja:</em> Teste as alternativas! 15% de 200 é 30. 200 + 30 = 230. Bateu!"
+                answer: 'A',
+                explanation: "O macete P/S só vale para 2 pessoas. Com 3, usamos a equação das frações (Redução à unidade):<br><code>1/Total = 1/T1 + 1/T2 + 1/T3</code><br>1/Total = 1/2 + 1/3 + 1/6 (MMC de 2,3,6 é 6)<br>1/Total = 3/6 + 2/6 + 1/6<br>1/Total = 6/6 ➔ 1/Total = 1. Invertendo, o Tempo Total é 1 dia exato!"
             },
             {
                 id: 9,
-                category: "Frações (Problema das Torneiras)",
-                text: "Uma torneira enche um tanque em 2 horas. Outra torneira enche o mesmo tanque em 3 horas. Se as duas forem abertas juntas, o tanque ficará cheio em:",
+                category: "Torneiras e Frações",
+                text: "A torneira X enche um tambor em 4 horas. A torneira Y, menos potente, enche em 12 horas. Se ambas forem ligadas ao mesmo tempo, quanto tempo gastarão?",
                 options: [
-                    { id: 'A', text: '5 horas' },
-                    { id: 'B', text: '2,5 horas' },
-                    { id: 'C', text: '1 hora e 12 minutos' },
-                    { id: 'D', text: '1 hora' }
+                    { id: 'A', text: '3 horas' },
+                    { id: 'B', text: '8 horas' },
+                    { id: 'C', text: '2 horas e 30 minutos' },
+                    { id: 'D', text: '6 horas' }
                 ],
-                answer: 'C',
-                explanation: "<strong>Truque Mestre:</strong> Reduza ao tempo de 1 hora! A torneira 1 enche 1/2 do tanque em 1h. A torneira 2 enche 1/3 em 1h. Juntas em 1h: 1/2 + 1/3 = 5/6 do tanque.<br>O tempo total é sempre o inverso dessa soma: 6/5 de hora.<br>Para transformar em minutos, multiplicamos por 60: (6/5) × 60 = 360 ÷ 5 = 72 minutos. 72 minutos é exatamente 1 hora e 12 minutos!"
+                answer: 'A',
+                explanation: "Trabalho conjunto, ambas enchem! <code>Produto / Soma</code><br>Produto: 4 × 12 = 48<br>Soma: 4 + 12 = 16<br>Tempo = 48 / 16 = 3 horas certinho."
             },
             {
                 id: 10,
-                category: "Frações (Desafio)",
-                text: "(Desafio CAp) Um estudante leu 1/4 de um livro na segunda-feira. Na terça-feira, ele leu 1/3 do que HAVIA SOBRADO. A fração que representa a quantidade de páginas que ainda faltam ler é:",
+                category: "Regra 3 x Torneiras idênticas",
+                text: "Cuidado com o texto! Duas torneiras idênticas, abertas juntas, enchem um tanque em 6 horas. Se, em vez de 2, tivéssemos 3 dessas torneiras abertas juntas, o tanque ficaria cheio em:",
                 options: [
-                    { id: 'A', text: '1/2' },
-                    { id: 'B', text: '5/12' },
-                    { id: 'C', text: '1/3' },
-                    { id: 'D', text: '7/12' }
+                    { id: 'A', text: '9 horas' },
+                    { id: 'B', text: '4 horas' },
+                    { id: 'C', text: '3 horas' },
+                    { id: 'D', text: '2 horas' }
                 ],
-                answer: 'A',
-                explanation: "<strong>Muita calma nessa hora!</strong><br>1) Segunda: Leu 1/4. Logo, <strong>SOBRARAM 3/4</strong> do livro.<br>2) Terça: Ele não leu 1/3 do total, leu 1/3 dos 3/4. Multiplicando: (1/3) × (3/4) = 3/12, que simplificando dá 1/4.<br>3) Total Lido: 1/4 (segunda) + 1/4 (terça) = 2/4 (ou 1/2, a metade do livro!).<br>Se ele leu a metade (1/2), falta ler exatamente a outra metade (1/2)."
+                answer: 'B',
+                explanation: "Isso <strong>NÃO</strong> é o problema clássico de tempos diferentes (P/S). Como elas são IDÊNTICAS, é uma simples Regra de Três Inversa! <br>Mais torneiras abertas = Menos tempo. Multiplica reto:<br>2 torneiras --- 6 horas<br>3 torneiras --- X horas<br>3X = 2 × 6 ➔ 3X = 12 ➔ X = 12 ÷ 3 = 4 horas."
             }
         ];
 
@@ -286,60 +352,60 @@
 
         questionsData.forEach((q, index) => {
             const questionHTML = `
-                <div class="bg-white rounded-2xl shadow-sm p-6 border border-gray-100 question-card" id="q-card-${q.id}">
+                <div class="bg-white rounded-2xl shadow-sm p-6 border border-slate-100 question-card" id="q-card-${q.id}">
                     <div class="flex items-center gap-2 mb-3">
-                        <span class="bg-blue-700 text-white text-xs font-bold px-2 py-1 rounded">Q${index + 1}</span>
-                        <span class="text-xs font-semibold text-gray-500 uppercase tracking-wider">${q.category}</span>
+                        <span class="bg-slate-900 text-white text-xs font-bold px-2 py-1 rounded">Q${index + 1}</span>
+                        <span class="text-xs font-semibold text-emerald-600 uppercase tracking-wider">${q.category}</span>
                     </div>
-                    <h3 class="text-gray-900 font-medium text-base md:text-lg mb-4 leading-relaxed">${q.text}</h3>
+                    <h3 class="text-slate-900 font-medium text-base md:text-lg mb-4 leading-relaxed">${q.text}</h3>
                     
                     <div class="space-y-3">
                         ${q.options.map(opt => `
                             <label class="relative flex items-center cursor-pointer group">
                                 <input type="radio" name="q${q.id}" value="${opt.id}" class="sr-only radio-custom">
-                                <div class="w-full flex items-center p-3 border-2 border-gray-200 rounded-xl transition-all duration-200 group-hover:border-blue-300 option-container">
-                                    <div class="flex-shrink-0 w-8 h-8 rounded-full border-2 border-gray-300 flex items-center justify-center font-bold text-gray-500 mr-3 marker transition-colors">
+                                <div class="w-full flex items-center p-3 border-2 border-slate-200 rounded-xl transition-all duration-200 group-hover:border-emerald-300 option-container bg-slate-50">
+                                    <div class="flex-shrink-0 w-8 h-8 rounded-full border-2 border-slate-300 flex items-center justify-center font-bold text-slate-500 mr-3 marker transition-colors bg-white">
                                         ${opt.id}
                                     </div>
-                                    <span class="text-gray-700 text-sm md:text-base">${opt.text}</span>
+                                    <span class="text-slate-700 text-sm md:text-base font-medium">${opt.text}</span>
                                 </div>
                             </label>
                         `).join('')}
                     </div>
 
                     <!-- Hidden Explanation Block -->
-                    <div id="explanation-${q.id}" class="explanation-block bg-blue-50 rounded-xl mt-4 px-4 border-l-4 border-blue-500 hidden-initially">
-                        <h4 class="font-bold text-blue-800 text-sm mb-2 flex items-center gap-1">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z" /></svg>
-                            Explicação do Professor (Gabarito: ${q.answer})
+                    <div id="explanation-${q.id}" class="explanation-block bg-slate-900 rounded-xl mt-4 px-5 border-l-4 border-emerald-500 hidden-initially">
+                        <h4 class="font-bold text-emerald-400 text-sm mb-2 flex items-center gap-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" /><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" /></svg>
+                            Gabarito: ${q.answer}
                         </h4>
-                        <p class="text-gray-700 text-sm leading-relaxed">${q.explanation}</p>
+                        <p class="text-slate-200 text-sm leading-relaxed">${q.explanation}</p>
                     </div>
                 </div>
             `;
             quizContainer.insertAdjacentHTML('beforeend', questionHTML);
         });
 
-        // Add dynamic styling for radio selections before submission
+        // Dynamic styling for radio selections
         document.querySelectorAll('.radio-custom').forEach(radio => {
             radio.addEventListener('change', function() {
-                // Reset all in same group
                 const name = this.getAttribute('name');
                 document.querySelectorAll(`input[name="${name}"]`).forEach(r => {
                     const container = r.nextElementSibling;
                     const marker = container.querySelector('.marker');
-                    container.classList.remove('border-blue-500', 'bg-blue-50');
-                    marker.classList.remove('border-blue-500', 'bg-blue-500', 'text-white');
-                    marker.classList.add('border-gray-300', 'text-gray-500');
+                    container.classList.remove('border-emerald-500', 'bg-emerald-50');
+                    container.classList.add('bg-slate-50', 'border-slate-200');
+                    marker.classList.remove('border-emerald-500', 'bg-emerald-500', 'text-white');
+                    marker.classList.add('border-slate-300', 'text-slate-500', 'bg-white');
                 });
                 
-                // Style selected
                 if(this.checked) {
                     const container = this.nextElementSibling;
                     const marker = container.querySelector('.marker');
-                    container.classList.add('border-blue-500', 'bg-blue-50');
-                    marker.classList.remove('border-gray-300', 'text-gray-500');
-                    marker.classList.add('border-blue-500', 'bg-blue-500', 'text-white');
+                    container.classList.remove('bg-slate-50', 'border-slate-200');
+                    container.classList.add('border-emerald-500', 'bg-emerald-50');
+                    marker.classList.remove('border-slate-300', 'text-slate-500', 'bg-white');
+                    marker.classList.add('border-emerald-500', 'bg-emerald-500', 'text-white');
                 }
             });
         });
@@ -359,7 +425,6 @@
             let score = 0;
             let allAnswered = true;
 
-            // Check if all are answered
             for (let i = 0; i < questionsData.length; i++) {
                 const q = questionsData[i];
                 const selected = document.querySelector(`input[name="q${q.id}"]:checked`);
@@ -370,11 +435,10 @@
             }
 
             if (!allAnswered) {
-                showAlert("Para o cálculo ser preciso, você precisa marcar uma alternativa em todas as questões.");
+                showAlert("Para revelar as resoluções com os macetes, você precisa tentar responder todas as questões primeiro!");
                 return;
             }
 
-            // Grade questions
             questionsData.forEach(q => {
                 const selected = document.querySelector(`input[name="q${q.id}"]:checked`);
                 const inputs = document.querySelectorAll(`input[name="q${q.id}"]`);
@@ -383,32 +447,27 @@
                     const container = input.nextElementSibling;
                     const marker = container.querySelector('.marker');
                     
-                    // Disable inputs
                     input.disabled = true;
-                    container.classList.remove('cursor-pointer', 'group-hover:border-blue-300');
+                    container.classList.remove('cursor-pointer', 'group-hover:border-emerald-300');
                     
                     if (input.value === q.answer) {
-                        // Mark Correct
                         container.classList.add('correct-answer');
                         marker.classList.add('bg-green-500', 'text-white', 'border-green-500');
-                        marker.classList.remove('border-gray-300', 'text-gray-500', 'border-blue-500', 'bg-blue-500');
+                        marker.classList.remove('border-slate-300', 'text-slate-500', 'border-emerald-500', 'bg-emerald-500', 'bg-white');
                         
                         if (input.checked) score++;
                     } else if (input.checked) {
-                        // Mark Wrong
                         container.classList.add('wrong-answer');
                         marker.classList.add('bg-red-500', 'text-white', 'border-red-500');
-                        marker.classList.remove('border-gray-300', 'text-gray-500', 'border-blue-500', 'bg-blue-500');
+                        marker.classList.remove('border-slate-300', 'text-slate-500', 'border-emerald-500', 'bg-emerald-500', 'bg-white');
                     }
                 });
 
-                // Show Explanation
                 const explanation = document.getElementById(`explanation-${q.id}`);
                 explanation.classList.remove('hidden-initially');
                 explanation.classList.add('show');
             });
 
-            // Hide Submit Button, Show Results
             document.getElementById('btn-submit').style.display = 'none';
             const resultsArea = document.getElementById('results-area');
             const scoreText = document.getElementById('score-text');
@@ -418,14 +477,13 @@
             scoreText.innerText = `${score} / 10`;
 
             if (score === 10) {
-                scoreMessage.innerText = "Brilhante! Você destruiu! Matemática já está no sangue. Rumo à aprovação!";
+                scoreMessage.innerText = "Nível Mestre Desbloqueado! Você dominou completamente a regra de três e o terror das torneiras.";
             } else if (score >= 7) {
-                scoreMessage.innerText = "Ótimo resultado! Você tem uma base muito sólida. Revise as resoluções das que errou para fechar a prova!";
+                scoreMessage.innerText = "Mandou muito bem! A estratégia de P/S e inversões já está na mente. Revise apenas os pequenos detalhes!";
             } else {
-                scoreMessage.innerText = "Sessão de diagnóstico concluída. Você precisa praticar mais matemática básica. Leia as explicações passo a passo de cada questão, elas vão te salvar!";
+                scoreMessage.innerText = "O mais importante agora não é a nota, é aprender a técnica. Leia o 'Macete de Ouro' em cada questão para ganhar velocidade!";
             }
             
-            // Scroll smoothly to results
             resultsArea.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
     </script>
