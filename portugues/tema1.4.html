@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado 1.4 - Morfologia e Sentido</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hidden-feedback { display: none; }
+        .show-feedback { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .correct-answer { border-color: #10B981; background-color: #ECFDF5; }
+        .wrong-answer { border-color: #EF4444; background-color: #FEF2F2; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased pb-20">
+
+    <!-- Header com botão de voltar integrado no topo esquerdo -->
+    <header class="bg-slate-900 text-white p-6 shadow-xl rounded-b-3xl mb-8 relative overflow-hidden">
+        <div class="absolute -right-8 -top-8 w-32 h-32 bg-indigo-500 rounded-full opacity-40 blur-2xl"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto">
+            <!-- Botão de Voltar no topo -->
+            <a href="../index.html" class="inline-flex items-center text-slate-300 hover:text-white font-semibold transition-colors duration-200 mb-6 text-sm bg-slate-800/80 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700 w-fit">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Voltar para o Painel Inicial
+            </a>
+
+            <!-- Título e Identificação -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="w-full md:w-auto">
+                    <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight">Tópico 1.4: Morfologia e Sentido</h1>
+                    <p class="text-slate-400 text-sm md:text-base font-medium">O Poder Oculto de Adjetivos, Advérbios e Verbos</p>
+                </div>
+                <div class="bg-slate-800/80 backdrop-blur border border-slate-700 p-3 rounded-2xl flex items-center gap-4 shadow-inner w-full md:w-auto justify-end">
+                    <div class="text-right">
+                        <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Foco das Bancas</p>
+                        <p class="text-xl font-black text-indigo-400">CAp/UPE & IFPE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4">
+        
+        <!-- Teoria: Aula de Cursinho -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8 mb-8">
+            <h2 class="text-2xl font-bold text-indigo-800 mb-6 flex items-center">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                Resumo Teórico: A Intenção por Trás da Palavra
+            </h2>
+            
+            <div class="prose max-w-none text-slate-700 space-y-5">
+                <p class="text-lg">Você já sabe ler um texto, mas agora precisa usar "óculos de raio-x". A gramática aplicada quer saber <strong>o que a palavra faz com o texto</strong>.</p>
+                
+                <div class="bg-indigo-50 p-5 rounded-xl border-l-4 border-indigo-500">
+                    <h3 class="font-bold text-indigo-900 text-lg mb-2">1. O Adjetivo como "Dedo Duro" da Opinião (Subjetividade)</h3>
+                    <p>O adjetivo não serve só para dar qualidade; ele revela o que o autor pensa sem que ele precise dizer "eu acho".</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li><strong>Fato (Objetivo):</strong> "O prefeito construiu uma ponte de 100 metros." (Apenas informa).</li>
+                        <li><strong>Opinião (Subjetivo):</strong> "O prefeito construiu uma <strong>monstruosa</strong> ponte." (O adjetivo revela crítica).</li>
+                    </ul>
+                    <p class="mt-2 text-sm text-indigo-800"><strong>Pegadinha Clássica:</strong> A posição muda o sentido! "Um <em>novo</em> carro" (recém-comprado) é diferente de "Um carro <em>novo</em>" (zero km). "Um <em>grande</em> homem" (notável) ≠ "Um homem <em>grande</em>" (alto).</p>
+                </div>
+
+                <div class="bg-indigo-50 p-5 rounded-xl border-l-4 border-indigo-500">
+                    <h3 class="font-bold text-indigo-900 text-lg mb-2">2. O Advérbio: Modificador de Verbo, Adjetivo ou de si mesmo</h3>
+                    <p>Os advérbios expressam as circunstâncias da ação (tempo, modo, lugar, intensidade). A banca adora os terminados em <strong>-MENTE</strong>.</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li>"Ele falou <strong>nervosamente</strong>." (Advérbio de modo - mostra o estado emocional).</li>
+                        <li>"O aluno estudou <strong>muito</strong>." (Intensidade) vs "O aluno estudou <strong>aqui</strong>." (Lugar).</li>
+                    </ul>
+                    <p class="mt-2 text-sm text-indigo-800"><strong>Atenção Máxima:</strong> A palavra "bastante". Se variar (bastantes alunos = muitos), é pronome adjetivo. Se NÃO variar (estudaram bastante = muito), é advérbio de intensidade!</p>
+                </div>
+
+                <div class="bg-indigo-50 p-5 rounded-xl border-l-4 border-indigo-500">
+                    <h3 class="font-bold text-indigo-900 text-lg mb-2">3. O Verbo e o Nível de Certeza (Modos Verbais)</h3>
+                    <p>Os verbos não indicam só o tempo, mas a <strong>atitude</strong> de quem fala:</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li><strong>Indicativo (Certeza/Fato):</strong> "A vacina <em>funciona</em>." (O autor não tem dúvidas).</li>
+                        <li><strong>Subjuntivo (Dúvida/Possibilidade):</strong> "Espero que a vacina <em>funcione</em>." (O autor trata como hipótese/desejo).</li>
+                        <li><strong>Imperativo (Ordem/Pedido):</strong> "<em>Tome</em> a vacina." (Função apelativa, o autor quer convencer o leitor).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Questões -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Simulado: 10 Questões de Prova</h2>
+            <form id="quiz-form" class="space-y-8">
+                
+                <!-- Q1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">01. (Estilo CAp/UPE)</span> "O pobre menino caminhava pelas ruas frias daquela enorme cidade." <br>Se alterarmos a posição do adjetivo "pobre" para depois do substantivo ("O menino pobre..."), haverá mudança de sentido?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) Não, em ambos os casos significa que o menino não tinha dinheiro.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) Sim, "pobre menino" indica falta de recursos, e "menino pobre" indica que ele é digno de pena.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) Sim, "pobre menino" expressa compaixão/pena (coitado), enquanto "menino pobre" refere-se à condição financeira (sem dinheiro).</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) Não, a ordem do adjetivo em português nunca altera a semântica da frase.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: C</strong><br>
+                        <strong>Explicação:</strong> Macete! Adjetivo <em>antes</em> do substantivo geralmente ganha sentido subjetivo, figurado ou afetivo (pobre menino = coitado). Adjetivo <em>depois</em> tem sentido objetivo/literal (menino pobre = sem dinheiro).
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">02. (Estilo IFPE)</span> "Ela abriu a porta <u>lentamente</u> e, <u>talvez</u>, tenha se arrependido do que viu <u>lá</u>." <br>Os advérbios destacados expressam, respectivamente, ideias de:</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) Tempo, dúvida e lugar.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) Modo, afirmação e tempo.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) Intensidade, possibilidade e lugar.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) Modo, dúvida e lugar.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: D</strong><br>
+                        <strong>Explicação:</strong> "Lentamente" indica a maneira/modo como abriu a porta. "Talvez" demonstra incerteza (dúvida). "Lá" aponta o espaço físico (lugar). 
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">03.</span> I. O diretor fez um <u>bom</u> discurso.<br>II. O homem falou <u>bem</u>.<br>As palavras destacadas em I e II são, morfológica e respectivamente:</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) Adjetivo e Advérbio.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) Advérbio e Adjetivo.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) Adjetivo e Adjetivo.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) Substantivo e Advérbio.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: A</strong><br>
+                        <strong>Explicação:</strong> "Bom" acompanha o nome "discurso" (Adjetivo). "Bem" modifica o verbo "falou", indicando modo (Advérbio). Lembrete: Adjetivo acompanha nome; advérbio acompanha verbo.
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">04.</span> "Compre seu ingresso agora mesmo e <u>garanta</u> sua diversão!"<br>O verbo sublinhado encontra-se no modo imperativo. Nos textos, esse modo verbal é utilizado para:</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) Relatar um fato do passado.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) Expressar uma dúvida.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) Instruir, convidar ou convencer o leitor a tomar uma atitude.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) Descrever de forma neutra o produto.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: C</strong><br>
+                        <strong>Explicação:</strong> O Modo Imperativo (compre, garanta, venha) marca a função apelativa. Serve para tentar convencer ou dar uma ordem/conselho ao receptor.
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">05.</span> "Havia <u>bastantes</u> motivos para ela sair <u>bastante</u> aborrecida da reunião." As palavras sublinhadas funcionam, respectivamente, como:</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) Advérbio e advérbio.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) Adjetivo e adjetivo.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) Pronome indefinido e advérbio.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) Advérbio e pronome indefinido.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: C</strong><br>
+                        <strong>Explicação:</strong> "Bastantes" acompanha o substantivo "motivos" e flexiona no plural (=muitos), sendo Pronome Indefinido (valor adjetivo). O segundo "bastante" modifica o adjetivo "aborrecida" (=muito) e é invariável, sendo Advérbio de intensidade.
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">06.</span> "O relatório apresentou uma análise <u>claramente</u> tendenciosa dos fatos." A retirada do advérbio sublinhado:</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) Torna a frase agramatical.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) Mantém o sentido exato, pois não altera a semântica.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) Diminui a força da afirmação, retirando o reforço do autor.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) Transforma o adjetivo "tendenciosa" em substantivo.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: C</strong><br>
+                        <strong>Explicação:</strong> Advérbios funcionam como modalizadores. Sem o "claramente", a análise ainda é tendenciosa, mas perde o reforço de que isso estava "evidente aos olhos de todos".
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">07.</span> "É fundamental que as autoridades <u>resolvam</u> o problema das enchentes." O verbo está no modo subjuntivo para evidenciar:</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) Um fato já concluído.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) Uma certeza absoluta de que será resolvido.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) Uma necessidade ou desejo, sem garantia de que de fato ocorra.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) Uma ordem direta aos moradores.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: C</strong><br>
+                        <strong>Explicação:</strong> O Subjuntivo é o modo da possibilidade/desejo. Ele marca que a ação é algo esperado, mas não é um fato consumado (que seria o indicativo).
+                    </div>
+                </div>
+
+                <!-- Q8 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">08.</span> Assinale a alternativa em que o adjetivo destacado indica clara <strong>subjetividade</strong> (opinião do autor):</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) O muro de <u>pedra</u> desabou.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) Fez um discurso <u>interminável</u>.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) Era de material <u>plástico</u>.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) O estudante <u>pernambucano</u> venceu.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: B</strong><br>
+                        <strong>Explicação:</strong> "Interminável" expressa o aborrecimento de quem ouve. Nas outras alternativas, temos adjetivos restritivos objetivos (pedra, plástico, pernambucano), que apenas classificam sem emitir juízo de valor.
+                    </div>
+                </div>
+
+                <!-- Q9 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">09.</span> Leia: 1) "Cientistas <u>descobrem</u> cura." | 2) "Cientistas <u>teriam descoberto</u> cura."<br>A diferença provocada pela mudança verbal é que:</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) A segunda indica futuro com certeza.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) A segunda exime o autor de responsabilidade, tratando o fato como hipótese não confirmada.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) A primeira demonstra um erro gramatical.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) Ambas têm exatamente o mesmo sentido.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: B</strong><br>
+                        <strong>Explicação:</strong> O uso do "Futuro do Pretérito" (teriam descoberto) na imprensa serve para noticiar fatos não confirmados. É um escudo que o autor usa para não afirmar com certeza.
+                    </div>
+                </div>
+
+                <!-- Q10 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">10.</span> Na frase "Eles falam <u>alto</u>", a palavra sublinhada é advérbio. Em qual alternativa a palavra destacada NÃO funciona como advérbio?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) Ela cantou <u>baixo</u>.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) Os carros andam <u>rápido</u>.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) Fizeram um muro muito <u>alto</u>.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) Bateu <u>forte</u> na porta.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: C</strong><br>
+                        <strong>Explicação:</strong> Em "muro alto", a palavra "alto" caracteriza o substantivo "muro", sendo um <strong>adjetivo</strong>. Nas demais, as palavras modificam verbos (cantou, andam, bateu), funcionando como advérbios.
+                    </div>
+                </div>
+
+                <div class="pt-6">
+                    <button type="button" id="submit-btn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-transform transform hover:-translate-y-1 text-lg">
+                        Entregar Simulado e Ver Correção
+                    </button>
+                </div>
+            </form>
+
+            <div id="result-box" class="hidden mt-8 p-6 bg-slate-800 rounded-xl text-center shadow-xl border border-slate-700">
+                <h3 class="text-2xl font-bold text-white mb-2">Desempenho: <span id="score-text" class="text-indigo-400"></span></h3>
+                <p class="text-slate-300 mb-4" id="score-msg"></p>
+                <p class="text-sm text-slate-400">Role para cima para ler as explicações detalhadas em cada questão.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const correctAnswers = {
+            q1: 'C', q2: 'D', q3: 'A', q4: 'C', q5: 'C', 
+            q6: 'C', q7: 'C', q8: 'B', q9: 'B', q10: 'C'
+        };
+
+        document.getElementById('submit-btn').addEventListener('click', function() {
+            let score = 0;
+            let answered = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const qName = 'q' + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const block = document.querySelectorAll('.question-block')[i-1];
+                const feedback = block.querySelector('.hidden-feedback');
+                
+                if (selected) {
+                    answered++;
+                    block.classList.remove('correct-answer', 'wrong-answer');
+                    
+                    if (selected.value === correctAnswers[qName]) {
+                        score++;
+                        block.classList.add('correct-answer');
+                    } else {
+                        block.classList.add('wrong-answer');
+                    }
+                    feedback.classList.add('show-feedback');
+                }
+            }
+
+            if (answered < 10) {
+                alert('Atenção: Você não respondeu todas as questões. Chute se necessário, igual na prova!');
+                return;
+            }
+
+            const resultBox = document.getElementById('result-box');
+            const scoreText = document.getElementById('score-text');
+            const scoreMsg = document.getElementById('score-msg');
+            
+            resultBox.classList.remove('hidden');
+            scoreText.textContent = `${score}/10`;
+            
+            if(score >= 8) {
+                scoreMsg.textContent = '🔥 Excelente! Você dominou a intenção do autor nas pegadinhas morfológicas.';
+            } else if (score >= 5) {
+                scoreMsg.textContent = '👍 Bom trabalho! Foque nas explicações das questões erradas, a prova cobra exatamente isso.';
+            } else {
+                scoreMsg.textContent = '💪 Continue firme! Morfologia interpretativa requer treino. Revise a teoria acima.';
+            }
+
+            this.textContent = 'Simulado Finalizado';
+            this.disabled = true;
+            this.classList.add('opacity-50', 'cursor-not-allowed');
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    </script>
+</body>
+</html>
