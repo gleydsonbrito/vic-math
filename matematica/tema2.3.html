@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado 2.3 - Equações do 1º Grau e Frações</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hidden-feedback { display: none; }
+        .show-feedback { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .correct-answer { border-color: #10B981; background-color: #ECFDF5; }
+        .wrong-answer { border-color: #EF4444; background-color: #FEF2F2; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased pb-20">
+
+    <!-- Header com botão de voltar no padrão Slate-900 -->
+    <header class="bg-slate-900 text-white p-6 shadow-xl rounded-b-3xl mb-8 relative overflow-hidden">
+        <div class="absolute -right-8 -top-8 w-32 h-32 bg-blue-500 rounded-full opacity-40 blur-2xl"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto">
+            <!-- Botão de Voltar no topo -->
+            <a href="index.html" class="inline-flex items-center text-slate-300 hover:text-white font-semibold transition-colors duration-200 mb-6 text-sm bg-slate-800/80 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700 w-fit">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Voltar para o Painel Inicial
+            </a>
+
+            <!-- Título e Identificação -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="w-full md:w-auto">
+                    <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight">Tópico 2.3: Equações do 1º Grau &amp; Frações</h1>
+                    <p class="text-slate-400 text-sm md:text-base font-medium">Modelagem de Problemas, Fração de Quantidades e Linguagem Algébrica</p>
+                </div>
+                <div class="bg-slate-800/80 backdrop-blur border border-slate-700 p-3 rounded-2xl flex items-center gap-4 shadow-inner w-full md:w-auto justify-end">
+                    <div class="text-right">
+                        <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Foco das Bancas</p>
+                        <p class="text-xl font-black text-blue-400">CAp/UPE &amp; IFPE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4">
+        
+        <!-- Resumo Teórico -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8 mb-8">
+            <h2 class="text-2xl font-bold text-blue-800 mb-6 flex items-center">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                Resumo Teórico: Traduzindo o Português para a Matemática
+            </h2>
+            
+            <div class="prose max-w-none text-slate-700 space-y-5">
+                <p class="text-lg">O segredo das provas do IFPE e CAp/UPE não é fazer conta grande, mas sim <strong>montar a equação correta a partir do texto</strong>.</p>
+                
+                <div class="bg-blue-50 p-5 rounded-xl border-l-4 border-blue-500">
+                    <h3 class="font-bold text-blue-900 text-lg mb-2">1. Dicionário de Tradução Algébrica</h3>
+                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                        <li><strong>"Um número desconhecido"</strong> &rarr; <span class="font-mono bg-blue-100 px-2 py-0.5 rounded font-bold text-blue-900">x</span></li>
+                        <li><strong>"O dobro / O triplo"</strong> &rarr; <span class="font-mono bg-blue-100 px-2 py-0.5 rounded font-bold text-blue-900">2x</span> / <span class="font-mono bg-blue-100 px-2 py-0.5 rounded font-bold text-blue-900">3x</span></li>
+                        <li><strong>"A metade / A terça parte"</strong> &rarr; <span class="font-mono bg-blue-100 px-2 py-0.5 rounded font-bold text-blue-900">x/2</span> / <span class="font-mono bg-blue-100 px-2 py-0.5 rounded font-bold text-blue-900">x/3</span></li>
+                        <li><strong>"O quádruplo de um número somado a 5"</strong> &rarr; <span class="font-mono bg-blue-100 px-2 py-0.5 rounded font-bold text-blue-900">4x + 5</span></li>
+                        <li><strong>"É igual a / Resulta em / Obtém-se"</strong> &rarr; <span class="font-mono bg-blue-100 px-2 py-0.5 rounded font-bold text-blue-900">=</span></li>
+                    </ul>
+                </div>
+
+                <div class="bg-blue-50 p-5 rounded-xl border-l-4 border-blue-500">
+                    <h3 class="font-bold text-blue-900 text-lg mb-2">2. Problemas de Resto com Frações (Tática da Sobra)</h3>
+                    <p>Quando a questão diz: <em>"Gastei 1/3 do dinheiro e depois 2/5 do total..."</em></p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li>Soma-se as frações gastas tirando o MMC dos denominadores.</li>
+                        <li>Calcula-se quanto sobrou em fração (o total é sempre 1 inteiro).</li>
+                        <li>Iguala-se essa fração restante ao valor em dinheiro que sobrou no texto.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Questões -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Simulado: 10 Questões de Prova</h2>
+            <form id="quiz-form" class="space-y-8">
+                
+                <!-- Q1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">01. (Estilo CAp/UPE)</span> Um estudante do 8º ano gasta 1/3 do seu tempo diário dormindo e 1/4 na escola. Sabendo que ele ainda dedica 10 horas restantes para estudo em casa e lazer, qual é o total de horas do seu dia?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) 20 horas</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) 24 horas</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) 18 horas</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) 22 horas</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: B</strong><br>
+                        <strong>Explicação:</strong> 1/3 + 1/4 = (4+3)/12 = 7/12 ocupados. Sobram 5/12 do dia (x). Se 5/12 de x = 10 &rArr; 5x = 120 &rArr; x = 24 horas.
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">02. (Estilo IFPE)</span> Somando-se o triplo de um número com a sua metade, obtém-se 70. Qual é esse número?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) 15</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) 18</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) 20</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) 25</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: C</strong><br>
+                        <strong>Explicação:</strong> Equação: 3x + x/2 = 70. Multiplicando tudo por 2 para eliminar a fração: 6x + x = 140 &rArr; 7x = 140 &rArr; x = 20.
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">03.</span> A soma de três números inteiros e consecutivos é igual a 81. Qual é o maior desses três números?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) 26</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) 27</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) 28</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) 29</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: C</strong><br>
+                        <strong>Explicação:</strong> Números consecutivos: x, (x + 1), (x + 2).<br>Equação: x + (x + 1) + (x + 2) = 81 &rArr; 3x + 3 = 81 &rArr; 3x = 78 &rArr; x = 26. O maior número é (x + 2) = 28.
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">04. (Estilo IFPE)</span> Numa sala de aula com 40 alunos, a quantidade de meninas corresponde a 3/5 do total de estudantes. Quantos são os meninos nessa sala?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) 16</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) 24</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) 20</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) 12</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: A</strong><br>
+                        <strong>Explicação:</strong> Se 3/5 são meninas, a fração de meninos é 2/5.<br>Calculando 2/5 de 40: (40 &divide; 5) &times; 2 = 8 &times; 2 = 16 meninos.
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">05.</span> Marina tinha uma quantia em dinheiro. Gastou 2/5 na compra de um livro e 1/3 do total na compra de um lanche. Se ainda lhe restaram R$ 16,00, qual era o valor inicial que Marina possuía?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) R$ 50,00</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) R$ 60,00</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) R$ 75,00</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) R$ 90,00</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: B</strong><br>
+                        <strong>Explicação:</strong> Gasto total: 2/5 + 1/3 = (6 + 5)/15 = 11/15.<br>Sobrou em fração: 4/15 do dinheiro (x).<br>4/15 de x = 16 &rArr; 4x = 240 &rArr; x = 60. Marina tinha R$ 60,00.
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">06. (Estilo CAp/UPE)</span> O dobro de um número adicionado a 15 é igual ao seu quádruplo subtraído de 9. Que número é esse?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) 10</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) 12</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) 14</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) 16</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: B</strong><br>
+                        <strong>Explicação:</strong> Equação: 2x + 15 = 4x - 9.<br>Isolando x: 15 + 9 = 4x - 2x &rArr; 24 = 2x &rArr; x = 12.
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">07.</span> Um pai tem 38 anos e seu filho tem 10 anos. Daqui a quantos anos a idade do pai será exatamente o triplo da idade do filho?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) 4 anos</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) 5 anos</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) 6 anos</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) 8 anos</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: A</strong><br>
+                        <strong>Explicação:</strong> Seja x o número de anos passados.<br>Pai no futuro: 38 + x. Filho no futuro: 10 + x.<br>Equação: 38 + x = 3 &times; (10 + x) &rArr; 38 + x = 30 + 3x &rArr; 8 = 2x &rArr; x = 4 anos.
+                    </div>
+                </div>
+
+                <!-- Q8 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">08. (Estilo IFPE)</span> Resolvendo a equação do 1º grau abaixo, qual é o valor de x? <br><span class="bg-slate-100 px-3 py-1.5 rounded font-mono text-sm inline-block mt-2 text-slate-800 font-bold border border-slate-200">(x - 2)/3 + (x + 1)/2 = 5</span></p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) x = 7</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) x = 5</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) x = 6</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) x = 8</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: A</strong><br>
+                        <strong>Explicação:</strong> MMC entre 3 e 2 é 6. Multiplicando toda a equação por 6:<br>2(x - 2) + 3(x + 1) = 30 &rArr; 2x - 4 + 3x + 3 = 30 &rArr; 5x - 1 = 30 &rArr; 5x = 35 &rArr; x = 7.
+                    </div>
+                </div>
+
+                <!-- Q9 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">09.</span> Um reservatório de água do IFPE estava com 1/4 da sua capacidade preenchida. Após adicionar 600 litros de água, o reservatório passou a ter 5/8 da sua capacidade total. Qual é a capacidade máxima desse reservatório?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) 1.200 litros</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) 1.600 litros</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) 1.800 litros</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) 2.400 litros</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: B</strong><br>
+                        <strong>Explicação:</strong> A fração adicionada foi 5/8 - 1/4 = 5/8 - 2/8 = 3/8.<br>Logo, 3/8 do total (x) equivale a 600 litros: 3x/8 = 600 &rArr; 3x = 4800 &rArr; x = 1.600 litros.
+                    </div>
+                </div>
+
+                <!-- Q10 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">10.</span> Em um campeonato de robótica, a equipe A marcou 12 pontos a mais que a equipe B. Se a soma das pontuações das duas equipes foi de 84 pontos, quantos pontos a equipe A obteve?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) 36 pontos</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) 42 pontos</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) 48 pontos</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) 54 pontos</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: C</strong><br>
+                        <strong>Explicação:</strong> Seja x a pontuação da equipe B. Equipe A = x + 12.<br>Soma: x + (x + 12) = 84 &rArr; 2x + 12 = 84 &rArr; 2x = 72 &rArr; x = 36.<br>Equipe A: 36 + 12 = 48 pontos.
+                    </div>
+                </div>
+
+                <div class="pt-6">
+                    <button type="button" id="submit-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-transform transform hover:-translate-y-1 text-lg">
+                        Entregar Simulado e Ver Correção
+                    </button>
+                </div>
+            </form>
+
+            <div id="result-box" class="hidden mt-8 p-6 bg-slate-800 rounded-xl text-center shadow-xl border border-slate-700">
+                <h3 class="text-2xl font-bold text-white mb-2">Desempenho: <span id="score-text" class="text-blue-400"></span></h3>
+                <p class="text-slate-300 mb-4" id="score-msg"></p>
+                <p class="text-sm text-slate-400">Role para cima para ler a explicação passo a passo de cada questão.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const correctAnswers = {
+            q1: 'B', q2: 'C', q3: 'C', q4: 'A', q5: 'B', 
+            q6: 'B', q7: 'A', q8: 'A', q9: 'B', q10: 'C'
+        };
+
+        document.getElementById('submit-btn').addEventListener('click', function() {
+            let score = 0;
+            let answered = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const qName = 'q' + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const block = document.querySelectorAll('.question-block')[i-1];
+                const feedback = block.querySelector('.hidden-feedback');
+                
+                if (selected) {
+                    answered++;
+                    block.classList.remove('correct-answer', 'wrong-answer');
+                    
+                    if (selected.value === correctAnswers[qName]) {
+                        score++;
+                        block.classList.add('correct-answer');
+                    } else {
+                        block.classList.add('wrong-answer');
+                    }
+                    feedback.classList.add('show-feedback');
+                }
+            }
+
+            if (answered < 10) {
+                alert('Atenção: Responda todas as 10 questões antes de entregar!');
+                return;
+            }
+
+            const resultBox = document.getElementById('result-box');
+            const scoreText = document.getElementById('score-text');
+            const scoreMsg = document.getElementById('score-msg');
+            
+            resultBox.classList.remove('hidden');
+            scoreText.textContent = `${score}/10`;
+            
+            if(score >= 8) {
+                scoreMsg.textContent = '🔥 Sensacional! Domínio total da modelagem de equações e frações!';
+            } else if (score >= 5) {
+                scoreMsg.textContent = '👍 Muito bom! Revise os cálculos onde houve erro de atrito ou sinal.';
+            } else {
+                scoreMsg.textContent = '💪 Não desanime! Traduzir do português para a matemática requer treino diário. Revise a teoria.';
+            }
+
+            this.textContent = 'Simulado Finalizado';
+            this.disabled = true;
+            this.classList.add('opacity-50', 'cursor-not-allowed');
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    </script>
+</body>
+</html>
