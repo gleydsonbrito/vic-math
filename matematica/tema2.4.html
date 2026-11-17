@@ -21,7 +21,7 @@
         
         <div class="relative z-10 max-w-7xl mx-auto">
             <!-- Botão de Voltar no topo -->
-            <a href="../index.html" class="inline-flex items-center text-slate-300 hover:text-white font-semibold transition-colors duration-200 mb-6 text-sm bg-slate-800/80 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700 w-fit">
+            <a href="index.html" class="inline-flex items-center text-slate-300 hover:text-white font-semibold transition-colors duration-200 mb-6 text-sm bg-slate-800/80 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700 w-fit">
                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
                 </svg>
@@ -88,4 +88,221 @@
                     <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">01. (Estilo IFPE)</span> No pátio de um campus do IFPE estão estacionados 25 veículos, entre carros e motos. Sabendo que, ao todo, foram contadas 74 rodas em contato com o chão, quantos carros há nesse pátio?</p>
                     <div class="space-y-2">
                         <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) 10 carros</span></label>
-                        <label class="flex
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) 12 carros</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) 13 carros</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) 15 carros</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: B</strong><br>
+                        <strong>Explicação:</strong> Sistema: (1) c + m = 25 | (2) 4c + 2m = 74.<br>Multiplicando a Eq. 1 por (-2): -2c - 2m = -50.<br>Somando com a Eq. 2: 2c = 24 &rArr; c = 12 carros (e 13 motos).
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">02. (Estilo CAp/UPE)</span> Em um simulado preparatório com 30 questões, cada resposta correta vale 4 pontos e cada resposta errada desconta 1 ponto. Se um estudante respondeu todas as questões e obteve 75 pontos, quantas questões ele acertou?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) 19 questões</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) 20 questões</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) 21 questões</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) 22 questões</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: C</strong><br>
+                        <strong>Explicação:</strong> Sistema: (1) c + e = 30 | (2) 4c - 1e = 75.<br>Somando direto (corta +e com -e): 5c = 105 &rArr; c = 21 acertos.
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">03.</span> Na lanchonete da escola, Lucas comprou 2 salgados e 1 suco, pagando R$ 13,00. No mesmo dia, Júlia comprou 3 salgados e 2 sucos iguais aos de Lucas, pagando R$ 21,00. Qual é o preço de 1 salgado?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) R$ 4,00</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) R$ 4,50</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) R$ 5,00</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) R$ 5,50</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: C</strong><br>
+                        <strong>Explicação:</strong> (1) 2x + y = 13 | (2) 3x + 2y = 21.<br>Multiplicando a Eq. 1 por (-2): -4x - 2y = -26.<br>Somando com a Eq. 2: -x = -5 &rArr; x = R$ 5,00 (salgado) e y = R$ 3,00 (suco).
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">04.</span> A soma de dois números é 42 e a diferença entre eles é 14. Qual é o produto (multiplicação) desses dois números?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) 392</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) 412</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) 364</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) 440</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: A</strong><br>
+                        <strong>Explicação:</strong> x + y = 42 e x - y = 14.<br>Somando: 2x = 56 &rArr; x = 28. Substituindo: 28 + y = 42 &rArr; y = 14.<br>Produto: 28 &times; 14 = 392.
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">05. (Estilo IFPE)</span> Um cofre contém apenas moedas de R$ 0,50 e de R$ 1,00, totalizando 35 moedas. Se o valor total guardado no cofre é de R$ 26,00, quantas moedas de R$ 0,50 existem nesse cofre?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) 15 moedas</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) 17 moedas</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) 18 moedas</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) 20 moedas</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: C</strong><br>
+                        <strong>Explicação:</strong> (1) x + y = 35 | (2) 0,5x + 1y = 26.<br>Subtraindo a Eq. 2 da Eq. 1: (x - 0,5x) + (y - y) = 35 - 26 &rArr; 0,5x = 9 &rArr; x = 18 moedas de R$ 0,50.
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">06.</span> O perímetro de um terreno retangular é igual a 60 metros. Sabe-se que o comprimento desse terreno mede 6 metros a mais que a sua largura. Qual é a área desse terreno?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) 180 m&sup2;</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) 216 m&sup2;</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) 240 m&sup2;</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) 270 m&sup2;</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: B</strong><br>
+                        <strong>Explicação:</strong> Perímetro: 2c + 2L = 60 &rArr; c + L = 30. Como c = L + 6, temos: (L + 6) + L = 30 &rArr; 2L = 24 &rArr; L = 12 m e c = 18 m.<br>Área = 18 &times; 12 = 216 m&sup2;.
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">07. (Estilo CAp/UPE)</span> Dado o sistema de equações abaixo, determine o valor de <strong>x - y</strong>:<br><span class="bg-slate-100 px-3 py-1.5 rounded font-mono text-sm inline-block mt-2 text-slate-800 font-bold border border-slate-200">3x + 2y = 19 &nbsp;|&nbsp; 2x - y = 8</span></p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) 2</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) 3</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) 4</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) 5</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: B</strong><br>
+                        <strong>Explicação:</strong> Multiplicando a 2ª equação por 2: 4x - 2y = 16.<br>Somando com a 1ª: 7x = 35 &rArr; x = 5.<br>Substituindo: 2(5) - y = 8 &rArr; y = 2. Logo, x - y = 5 - 2 = 3.
+                    </div>
+                </div>
+
+                <!-- Q8 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">08.</span> Em uma fazenda em Belo Jardim (PE), há galinhas e porcos. Sabe-se que ao todo são 40 cabeças e 112 pés. Qual é a diferença entre a quantidade de galinhas e a quantidade de porcos?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) 6</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) 8</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) 10</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) 12</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: B</strong><br>
+                        <strong>Explicação:</strong> g + p = 40 e 2g + 4p = 112.<br>Dividindo a 2ª por 2: g + 2p = 56.<br>Subtraindo da 1ª: p = 16 porcos e g = 24 galinhas. Diferença: 24 - 16 = 8.
+                    </div>
+                </div>
+
+                <!-- Q9 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">09. (Estilo IFPE)</span> A idade de um professor hoje é o quádruplo da idade de seu aluno. Daqui a 10 anos, a idade do professor será apenas o dobro da idade do aluno. Qual é a soma das idades atuais dos dois?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) 25 anos</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) 30 anos</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) 35 anos</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) 40 anos</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: A</strong><br>
+                        <strong>Explicação:</strong> (1) P = 4A | (2) P + 10 = 2(A + 10) &rArr; P + 10 = 2A + 20.<br>Substituindo P por 4A: 4A + 10 = 2A + 20 &rArr; 2A = 10 &rArr; A = 5 anos e P = 20 anos. Soma = 25 anos.
+                    </div>
+                </div>
+
+                <!-- Q10 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">10.</span> Para assistir a uma peça teatral, foram vendidos 150 ingressos entre inteiras (R$ 20,00) e meias-entradas (R$ 10,00). Se a arrecadação total da bilheteria foi de R$ 2.200,00, quantos ingressos de meia-entrada foram vendidos?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) 70 ingressos</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="B" class="mt-1 mr-3 text-blue-600"> <span>B) 80 ingressos</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="C" class="mt-1 mr-3 text-blue-600"> <span>C) 90 ingressos</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="D" class="mt-1 mr-3 text-blue-600"> <span>D) 100 ingressos</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-blue-700">Gabarito: B</strong><br>
+                        <strong>Explicação:</strong> (1) i + m = 150 | (2) 20i + 10m = 2200.<br>Dividindo a Eq. 2 por 10: 2i + m = 220.<br>Subtraindo da Eq. 1: i = 70 inteiras &rArr; m = 80 meias-entradas.
+                    </div>
+                </div>
+
+                <div class="pt-6">
+                    <button type="button" id="submit-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-transform transform hover:-translate-y-1 text-lg">
+                        Entregar Simulado e Ver Correção
+                    </button>
+                </div>
+            </form>
+
+            <div id="result-box" class="hidden mt-8 p-6 bg-slate-800 rounded-xl text-center shadow-xl border border-slate-700">
+                <h3 class="text-2xl font-bold text-white mb-2">Desempenho: <span id="score-text" class="text-blue-400"></span></h3>
+                <p class="text-slate-300 mb-4" id="score-msg"></p>
+                <p class="text-sm text-slate-400">Role para cima para ler a explicação passo a passo de cada questão.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const correctAnswers = {
+            q1: 'B', q2: 'C', q3: 'C', q4: 'A', q5: 'C', 
+            q6: 'B', q7: 'B', q8: 'B', q9: 'A', q10: 'B'
+        };
+
+        document.getElementById('submit-btn').addEventListener('click', function() {
+            let score = 0;
+            let answered = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const qName = 'q' + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const block = document.querySelectorAll('.question-block')[i-1];
+                const feedback = block.querySelector('.hidden-feedback');
+                
+                if (selected) {
+                    answered++;
+                    block.classList.remove('correct-answer', 'wrong-answer');
+                    
+                    if (selected.value === correctAnswers[qName]) {
+                        score++;
+                        block.classList.add('correct-answer');
+                    } else {
+                        block.classList.add('wrong-answer');
+                    }
+                    feedback.classList.add('show-feedback');
+                }
+            }
+
+            if (answered < 10) {
+                alert('Atenção: Responda todas as 10 questões antes de entregar!');
+                return;
+            }
+
+            const resultBox = document.getElementById('result-box');
+            const scoreText = document.getElementById('score-text');
+            const scoreMsg = document.getElementById('score-msg');
+            
+            resultBox.classList.remove('hidden');
+            scoreText.textContent = `${score}/10`;
+            
+            if(score >= 8) {
+                scoreMsg.textContent = '🔥 Excelente! Você dominou o Método da Adição e a montagem de sistemas!';
+            } else if (score >= 5) {
+                scoreMsg.textContent = '👍 Bom desempenho! Revise as questões em que houve troca de sinal na multiplicação.';
+            } else {
+                scoreMsg.textContent = '💪 Continue praticando! Sistemas exigem organização: sempre defina quem é x e quem é y antes de armar a conta.';
+            }
+
+            this.textContent = 'Simulado Finalizado';
+            this.disabled = true;
+            this.classList.add('opacity-50', 'cursor-not-allowed');
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    </script>
+</body>
+</html>
