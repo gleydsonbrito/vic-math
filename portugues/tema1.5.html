@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado 1.5 - Sintaxe da Oração</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hidden-feedback { display: none; }
+        .show-feedback { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .correct-answer { border-color: #10B981; background-color: #ECFDF5; }
+        .wrong-answer { border-color: #EF4444; background-color: #FEF2F2; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased pb-20">
+
+    <!-- Header no padrão Slate-900 -->
+    <header class="bg-slate-900 text-white p-6 shadow-xl rounded-b-3xl mb-8 relative overflow-hidden">
+        <div class="absolute -right-8 -top-8 w-32 h-32 bg-indigo-500 rounded-full opacity-40 blur-2xl"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto">
+            <a href="../index.html" class="inline-flex items-center text-slate-300 hover:text-white font-semibold transition-colors duration-200 mb-6 text-sm bg-slate-800/80 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700 w-fit">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Voltar para o Painel Inicial
+            </a>
+
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="w-full md:w-auto">
+                    <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight">Tópico 1.5: Sintaxe da Oração</h1>
+                    <p class="text-slate-400 text-sm md:text-base font-medium">Sujeito, Predicado, Transitividade Verbal e Concordância Aplicada</p>
+                </div>
+                <div class="bg-slate-800/80 backdrop-blur border border-slate-700 p-3 rounded-2xl flex items-center gap-4 shadow-inner w-full md:w-auto justify-end">
+                    <div class="text-right">
+                        <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Foco das Bancas</p>
+                        <p class="text-xl font-black text-indigo-400">CAp/UPE &amp; IFPE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4">
+        
+        <!-- Resumo Teórico -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8 mb-8">
+            <h2 class="text-2xl font-bold text-indigo-800 mb-6 flex items-center">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                Resumo Teórico: A Engrenagem da Frase
+            </h2>
+            
+            <div class="prose max-w-none text-slate-700 space-y-5">
+                <p class="text-lg">Nas provas do CAp/UPE e do IFPE, a sintaxe não é cobrada apenas para dar nomes aos termos, mas para testar <strong>concordância verbal</strong> (por que o verbo vai para o singular ou plural?) e <strong>regência</strong> (quando usar preposição).</p>
+                
+                <div class="bg-indigo-50 p-5 rounded-xl border-l-4 border-indigo-500">
+                    <h3 class="font-bold text-indigo-900 text-lg mb-2">1. O Sujeito e as Pegadinhas de Ordem Inversa</h3>
+                    <p>O sujeito é o termo com o qual o verbo concorda. Ele nem sempre aparece no começo da frase!</p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li><strong>Ordem Inversa:</strong> "Chegaram ontem <u>os resultados da prova</u>." (O sujeito é <em>os resultados</em>, por isso o verbo está no plural).</li>
+                        <li><strong>Sujeito Oculto (Desinencial):</strong> "<u>Estudamos</u> bastante para o IFPE." (Identificado pela terminação do verbo: <em>Nós</em>).</li>
+                        <li><strong>Oração Sem Sujeito (Verbos Impessoais):</strong> Verbo <strong>HAVER</strong> no sentido de existir fica sempre no singular: "<em>Havia</em> muitos candidatos" (e nunca "Haviam"). Fenômenos da natureza ("Choveu ontem") também não têm sujeito.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-indigo-50 p-5 rounded-xl border-l-4 border-indigo-500">
+                    <h3 class="font-bold text-indigo-900 text-lg mb-2">2. Transitividade Verbal: Quem Pede Complemento?</h3>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li><strong>Verbo Intransitivo (VI):</strong> Tem sentido completo sozinho. Ex.: "O candidato <em>chegou</em> cedo." ("cedo" é apenas circunstância de tempo).</li>
+                        <li><strong>Verbo Transitivo Direto (VTD):</strong> Pede complemento <strong>sem</strong> preposição obrigatória (Objeto Direto). Ex.: "O aluno <em>resolveu</em> <u>a questão</u>."</li>
+                        <li><strong>Verbo Transitivo Indireto (VTI):</strong> Exige preposição obrigatória (Objeto Indireto). Ex.: "Todos <em>precisam</em> <u>de dedicação</u>."</li>
+                        <li><strong>Verbo de Ligação (VL):</strong> Não indica ação; apenas liga o sujeito a uma característica (Predicativo do Sujeito). Ex.: "A prova <em>parecia</em> <u>difícil</u>."</li>
+                    </ul>
+                </div>
+
+                <div class="bg-indigo-50 p-5 rounded-xl border-l-4 border-indigo-500">
+                    <h3 class="font-bold text-indigo-900 text-lg mb-2">3. Tipos de Predicado</h3>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li><strong>Predicado Verbal:</strong> O núcleo é um verbo de ação (VI, VTD ou VTI). Ex.: "O professor <u>explicou a matéria</u>."</li>
+                        <li><strong>Predicado Nominal:</strong> Tem verbo de ligação + característica do sujeito. Ex.: "Os estudantes <u>estão confiantes</u>."</li>
+                        <li><strong>Predicado Verbo-Nominal:</strong> Mistura ação + estado/característica ao mesmo tempo. Ex.: "Os candidatos <u>saíram alegres</u> da sala." (Ação de sair + estado de estarem alegres).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Questões -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Simulado: 10 Questões de Prova</h2>
+            <form id="quiz-form" class="space-y-8">
+                
+                <!-- Q1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">01. (Estilo IFPE)</span> Leia a frase: "Faltam ainda três meses para a realização do exame de seleção."<br>Qual é o sujeito da oração acima?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) Sujeito indeterminado.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) Oração sem sujeito.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) Três meses.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) O exame de seleção.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: C</strong><br>
+                        <strong>Explicação:</strong> Colocando a frase na ordem direta: "Três meses ainda faltam para a realização do exame." O termo "três meses" é o sujeito simples, por isso o verbo "faltar" está no plural (faltam).
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">02. (Estilo CAp/UPE)</span> Assinale a alternativa em que a oração apresenta <strong>sujeito inexistente</strong> (oração sem sujeito):</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) Existiam muitas dúvidas sobre o edital.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) Havia muitas dúvidas sobre o edital.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) Surgiram muitas dúvidas sobre o edital.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q2" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) Os alunos tinham muitas dúvidas sobre o edital.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: B</strong><br>
+                        <strong>Explicação:</strong> O verbo "haver" no sentido de existir é impessoal (não possui sujeito) e fica obrigatoriamente na 3ª pessoa do singular. Já o verbo "existir" (letra A) tem sujeito ("muitas dúvidas") e vai para o plural.
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">03.</span> Na frase: "Os estudantes <u>assistiram ao filme</u> histórico no auditório." O verbo sublinhado classifica-se, quanto à predicação, como:</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) Verbo intransitivo.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) Verbo transitivo direto.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) Verbo transitivo indireto.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q3" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) Verbo de ligação.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: C</strong><br>
+                        <strong>Explicação:</strong> Quem assiste (no sentido de ver/presenciar) assiste <strong>A</strong> alguma coisa. A presença da preposição "a" (em "ao filme") torna o complemento um Objeto Indireto e o verbo Transitivo Indireto.
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">04. (Estilo IFPE)</span> Compare as duas orações:<br>I. O céu <u>virou</u> tempestade.<br>II. O motorista <u>virou</u> a esquina.<br>O verbo "virar" é, respectivamente:</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) Verbo de ligação e verbo transitivo direto.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) Verbo transitivo direto e verbo de ligação.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) Verbo intransitivo e verbo transitivo indireto.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q4" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) Verbo de ligação em ambos os casos.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: A</strong><br>
+                        <strong>Explicação:</strong> Em I, "virou" indica mudança de estado ("transformou-se em"), funcionando como Verbo de Ligação. Em II, indica uma ação física de dobrar/contornar algo ("a esquina"), sendo Verbo Transitivo Direto.
+                    </div>
+                </div>
+
+                <!-- Q5 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">05.</span> Na oração: "Os atletas <u>terminaram a maratona exaustos</u>", temos um exemplo de:</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) Predicado verbal.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) Predicado nominal.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) Predicado verbo-nominal.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q5" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) Sujeito composto.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: C</strong><br>
+                        <strong>Explicação:</strong> Há dois núcleos no predicado: o verbo de ação "terminaram" (VTD) e o adjetivo "exaustos" (predicativo do sujeito que indica o estado dos atletas ao terminarem). Logo, é um predicado verbo-nominal.
+                    </div>
+                </div>
+
+                <!-- Q6 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">06. (Estilo CAp/UPE)</span> Assinale a alternativa em que o termo destacado exerce a função de <strong>Objeto Direto</strong>:</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) O aluno obedeceu <u>ao regulamento</u>.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) A equipe conquistou <u>o primeiro lugar</u>.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) Todos gostaram <u>da apresentação</u>.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q6" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) O livro pertence <u>à biblioteca</u>.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: B</strong><br>
+                        <strong>Explicação:</strong> Quem conquista, conquista algo (sem preposição obrigatória) &rarr; "o primeiro lugar" é Objeto Direto. Nas outras letras (ao, da, à), os verbos exigem preposição, formando Objetos Indiretos.
+                    </div>
+                </div>
+
+                <!-- Q7 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">07.</span> "Precisa-se <u>de técnicos em informática</u>." Na frase, o sujeito classifica-se como:</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) Sujeito simples ("técnicos em informática").</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) Sujeito indeterminado.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) Sujeito oculto.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q7" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) Oração sem sujeito.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: B</strong><br>
+                        <strong>Explicação:</strong> Pegadinha clássica! Quando um Verbo Transitivo Indireto ("precisar DE") vem acompanhado da partícula "se", o "se" é Índice de Indeterminação do Sujeito. Por isso o verbo fica obrigatoriamente no singular ("Precisa-se") e o sujeito é indeterminado.
+                    </div>
+                </div>
+
+                <!-- Q8 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">08. (Estilo IFPE)</span> Em qual das frases abaixo o verbo é <strong>Intransitivo</strong> (não necessita de complemento)?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) O avião decolou pontualmente às 14h.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) O piloto verificou os instrumentos.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) Os passageiros entregaram os bilhetes.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q8" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) A companhia aérea ofereceu lanches.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: A</strong><br>
+                        <strong>Explicação:</strong> "O avião decolou" já possui sentido completo. Os termos "pontualmente" (modo) e "às 14h" (tempo) são apenas adjuntos adverbiais, e não objetos.
+                    </div>
+                </div>
+
+                <!-- Q9 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">09.</span> Na frase: "O diretor entregou <u>os certificados</u> <u>aos formandos</u>." Os termos sublinhados são, respectivamente:</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) Objeto indireto e objeto direto.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) Objeto direto e objeto indireto.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) Sujeito e objeto indireto.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q9" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) Predicativo do sujeito e objeto direto.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: B</strong><br>
+                        <strong>Explicação:</strong> O verbo "entregar" é Transitivo Direto e Indireto (bitransitivo): quem entrega, entrega algo (<strong>os certificados</strong> = Objeto Direto) a alguém (<strong>aos formandos</strong> = Objeto Indireto, com preposição "a").
+                    </div>
+                </div>
+
+                <!-- Q10 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-indigo-600">10.</span> "A prova do IFPE continua difícil, mas todos permanecem motivados." Os verbos "continua" e "permanecem" são classificados como:</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="A" class="mt-1 mr-3 text-indigo-600"> <span>A) Verbos intransitivos.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="B" class="mt-1 mr-3 text-indigo-600"> <span>B) Verbos transitivos diretos.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="C" class="mt-1 mr-3 text-indigo-600"> <span>C) Verbos de ligação.</span></label>
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q10" value="D" class="mt-1 mr-3 text-indigo-600"> <span>D) Verbos impessoais.</span></label>
+                    </div>
+                    <div class="hidden-feedback mt-4 p-4 bg-slate-100 rounded-lg border border-slate-300 text-sm">
+                        <strong class="text-indigo-700">Gabarito: C</strong><br>
+                        <strong>Explicação:</strong> Os verbos "continuar" e "permanecer" indicam continuidade de estado, ligando os sujeitos ("a prova" e "todos") às suas características ("difícil" e "motivados"). São Verbos de Ligação e formam Predicados Nominais.
+                    </div>
+                </div>
+
+                <div class="pt-6">
+                    <button type="button" id="submit-btn" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition-transform transform hover:-translate-y-1 text-lg">
+                        Entregar Simulado e Ver Correção
+                    </button>
+                </div>
+            </form>
+
+            <div id="result-box" class="hidden mt-8 p-6 bg-slate-800 rounded-xl text-center shadow-xl border border-slate-700">
+                <h3 class="text-2xl font-bold text-white mb-2">Desempenho: <span id="score-text" class="text-indigo-400"></span></h3>
+                <p class="text-slate-300 mb-4" id="score-msg"></p>
+                <p class="text-sm text-slate-400">Role para cima para ler a explicação detalhada de cada questão.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const correctAnswers = {
+            q1: 'C', q2: 'B', q3: 'C', q4: 'A', q5: 'C', 
+            q6: 'B', q7: 'B', q8: 'A', q9: 'B', q10: 'C'
+        };
+
+        document.getElementById('submit-btn').addEventListener('click', function() {
+            let score = 0;
+            let answered = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const qName = 'q' + i;
+                const selected = document.querySelector(`input[name="${qName}"]:checked`);
+                const block = document.querySelectorAll('.question-block')[i-1];
+                const feedback = block.querySelector('.hidden-feedback');
+                
+                if (selected) {
+                    answered++;
+                    block.classList.remove('correct-answer', 'wrong-answer');
+                    
+                    if (selected.value === correctAnswers[qName]) {
+                        score++;
+                        block.classList.add('correct-answer');
+                    } else {
+                        block.classList.add('wrong-answer');
+                    }
+                    feedback.classList.add('show-feedback');
+                }
+            }
+
+            if (answered < 10) {
+                alert('Atenção: Responda todas as 10 questões antes de entregar!');
+                return;
+            }
+
+            const resultBox = document.getElementById('result-box');
+            const scoreText = document.getElementById('score-text');
+            const scoreMsg = document.getElementById('score-msg');
+            
+            resultBox.classList.remove('hidden');
+            scoreText.textContent = `${score}/10`;
+            
+            if(score >= 8) {
+                scoreMsg.textContent = '🔥 Excelente! Você dominou a análise sintática e as pegadinhas de concordância!';
+            } else if (score >= 5) {
+                scoreMsg.textContent = '👍 Bom desempenho! Revise as explicações de transitividade verbal e sujeito inexistente.';
+            } else {
+                scoreMsg.textContent = '💪 Continue praticando! Encontrar o sujeito e o verbo é a base para gabaritar Português no IFPE e CAp.';
+            }
+
+            this.textContent = 'Simulado Finalizado';
+            this.disabled = true;
+            this.classList.add('opacity-50', 'cursor-not-allowed');
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    </script>
+</body>
+</html>
