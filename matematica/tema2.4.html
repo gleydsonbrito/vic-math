@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulado 2.4 - Sistemas de Equações do 1º Grau</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hidden-feedback { display: none; }
+        .show-feedback { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .correct-answer { border-color: #10B981; background-color: #ECFDF5; }
+        .wrong-answer { border-color: #EF4444; background-color: #FEF2F2; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased pb-20">
+
+    <!-- Header com botão de voltar no padrão Slate-900 -->
+    <header class="bg-slate-900 text-white p-6 shadow-xl rounded-b-3xl mb-8 relative overflow-hidden">
+        <div class="absolute -right-8 -top-8 w-32 h-32 bg-blue-500 rounded-full opacity-40 blur-2xl"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto">
+            <!-- Botão de Voltar no topo -->
+            <a href="index.html" class="inline-flex items-center text-slate-300 hover:text-white font-semibold transition-colors duration-200 mb-6 text-sm bg-slate-800/80 hover:bg-slate-700 px-3 py-1.5 rounded-lg border border-slate-700 w-fit">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+                Voltar para o Painel Inicial
+            </a>
+
+            <!-- Título e Identificação -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="w-full md:w-auto">
+                    <h1 class="text-2xl md:text-3xl font-extrabold tracking-tight">Tópico 2.4: Sistemas de Equações (1º Grau)</h1>
+                    <p class="text-slate-400 text-sm md:text-base font-medium">Duas Incógnitas, Método da Adição e Substituição</p>
+                </div>
+                <div class="bg-slate-800/80 backdrop-blur border border-slate-700 p-3 rounded-2xl flex items-center gap-4 shadow-inner w-full md:w-auto justify-end">
+                    <div class="text-right">
+                        <p class="text-xs text-slate-400 font-bold uppercase tracking-wider">Foco das Bancas</p>
+                        <p class="text-xl font-black text-blue-400">CAp/UPE &amp; IFPE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4">
+        
+        <!-- Resumo Teórico -->
+        <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8 mb-8">
+            <h2 class="text-2xl font-bold text-blue-800 mb-6 flex items-center">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                Resumo Teórico: Duas Letras, Duas Equações
+            </h2>
+            
+            <div class="prose max-w-none text-slate-700 space-y-5">
+                <p class="text-lg">Sempre que um problema pedir para descobrir <strong>dois valores diferentes</strong> ao mesmo tempo (ex.: preço de um lanche e de um suco), você deve criar duas letras (<span class="font-mono font-bold text-blue-900">x</span> e <span class="font-mono font-bold text-blue-900">y</span>) e montar duas equações.</p>
+                
+                <div class="bg-blue-50 p-5 rounded-xl border-l-4 border-blue-500">
+                    <h3 class="font-bold text-blue-900 text-lg mb-2">1. O Método da Adição (O Mais Rápido na Prova)</h3>
+                    <p>O objetivo é somar a equação de cima com a de baixo para <strong>cortar (zerar)</strong> uma das letras.</p>
+                    <div class="bg-white p-4 rounded-lg border border-blue-200 mt-3 font-mono text-sm space-y-1">
+                        <p>Equação 1: <strong>x + y = 20</strong></p>
+                        <p>Equação 2: <strong>x - y = 6</strong></p>
+                        <p class="text-blue-700 pt-1 border-t border-slate-200">Somando as duas: (x + x) + (y - y) = 20 + 6 &rArr; <strong>2x = 26</strong> &rArr; <strong>x = 13</strong></p>
+                    </div>
+                    <p class="mt-2 text-sm text-blue-800"><strong>Bizu de Prova:</strong> Se nenhuma letra tiver sinais opostos (+y e -y), multiplique uma das equações inteiras por <strong>-1</strong> (ou por outro número) para forçar o corte!</p>
+                </div>
+
+                <div class="bg-blue-50 p-5 rounded-xl border-l-4 border-blue-500">
+                    <h3 class="font-bold text-blue-900 text-lg mb-2">2. Os 3 Modelos Clássicos do IFPE e CAp/UPE</h3>
+                    <ul class="list-disc pl-5 mt-2 space-y-2">
+                        <li><strong>Estacionamento (Carros e Motos):</strong> Equação 1 soma os veículos (<span class="font-mono">c + m = total</span>). Equação 2 soma as rodas (<span class="font-mono">4c + 2m = rodas</span>).</li>
+                        <li><strong>Prova (Acertos e Erros):</strong> Equação 1 soma as questões (<span class="font-mono">c + e = questões</span>). Equação 2 calcula os pontos (<span class="font-mono">pontos_acerto &times; c - pontos_erro &times; e = nota</span>).</li>
+                        <li><strong>Compra na Cantina:</strong> Duas pessoas compram quantidades diferentes de dois itens e pagam valores diferentes.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Questões -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold text-slate-800 mb-6">Simulado: 10 Questões de Prova</h2>
+            <form id="quiz-form" class="space-y-8">
+                
+                <!-- Q1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 question-block">
+                    <p class="font-bold text-slate-800 mb-4"><span class="text-blue-600">01. (Estilo IFPE)</span> No pátio de um campus do IFPE estão estacionados 25 veículos, entre carros e motos. Sabendo que, ao todo, foram contadas 74 rodas em contato com o chão, quantos carros há nesse pátio?</p>
+                    <div class="space-y-2">
+                        <label class="flex items-start p-3 border rounded-lg hover:bg-slate-50 cursor-pointer"><input type="radio" name="q1" value="A" class="mt-1 mr-3 text-blue-600"> <span>A) 10 carros</span></label>
+                        <label class="flex
